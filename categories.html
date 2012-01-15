@@ -4,18 +4,35 @@ title: Categories
 header: Posts By Category
 group: example-page
 ---
-
-<ul class="tag_box inline">
-  {% assign categories_list = site.categories %}
-  {% include helpers/categories_list.html %}
-</ul>
-
-
-{% for category in site.categories %} 
-  <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
-  <ul>
-    {% assign pages_list = category[1] %}  
+{% comment%}	
+{% assign categoryName = "usage"%}
+{% endcomment%}	
+{% if categoryName != null %}
+	{% assign category = site.categories[categoryName] %}
+	<h2>{{categoryName}}</h2>
+	<h2>共 {{ category | size }} 篇</h2>
+	{% assign pages_list = category %}  
     {% include helpers/pages_list.html %}
-  </ul>
-{% endfor %}
+{% comment%}	
+	{% for category in site.categories %} 
+  		{% if category[0] == categoryName %}
+  		 <ul>
+    	{% assign pages_list = category[1] %}  
+    	{% include helpers/pages_list.html %}
+    	</ul>
+    	{% endif%}
+	{% endfor %}	
+{% endcomment%}	
+{% else %}
+	{% for category in site.categories %} 
+  		<h2 id="{{ category[0] }}-ref">{{ category[0] }}</h2>
+  		<ul>
+    	{% assign pages_list = category[1] %}  
+    	{% include helpers/pages_list.html %}
+  		</ul>
+	{% endfor %}
+{% endif %}
+
+
+
 

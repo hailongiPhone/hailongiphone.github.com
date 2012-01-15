@@ -8,11 +8,17 @@ var:
   categories_path : /categories.html
   tags_path : /tags.html
 
-production_url : http://username.github.com # or your custom domain name
-title :HaiLong 
+production_url : http://hailongiphone.github.com # or your custom domain name
+title : HaiLong 
 
 author :
-  name :HalLong 
-  email :ghl_hh@hotmail.com
+  name : HalLong 
+  email : ghl_hh@hotmail.com
   github : hailongiphone
-  twitter :
+  twitter : @HaiLongGuo
+
+title1 : Hai
+title2 : Long
+siteDescription :  记录我作为一个程序员的学习轨迹
+
+
