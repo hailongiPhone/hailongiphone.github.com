@@ -12,9 +12,12 @@ menuSelected: {About : "selected"}
 
 _haiLong_   
 
-* 自2009年开始从事iPhone开发   
 
-* 客观的记录 
+* 自2009年开始从事iPhone开发     
+
+* 客观的记录    
+
+   
   
  
  
