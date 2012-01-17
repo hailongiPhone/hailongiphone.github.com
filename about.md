@@ -13,9 +13,8 @@ menuSelected: {About : "selected"}
 _haiLong_   
 
 
-* 自2009年开始从事iPhone开发     
-
-* 客观的记录    
+- 自2009年开始从事iPhone开发     
+- 客观的记录    
 
    
   
@@ -27,6 +26,5 @@ _haiLong_
 *****
 
 # 工作经历
-* 2007-2008  [gameloft智乐软件成都有限公司](http://www.gameloft.com/)   
-
-* 2009 至今    [成都知迅软件技术有限公司 ](http://www.e-global-agent.com/)  
+- 2007-2008  [gameloft智乐软件成都有限公司](http://www.gameloft.com/)   
+- 2009 至今    [成都知迅软件技术有限公司 ](http://www.e-global-agent.com/)  
