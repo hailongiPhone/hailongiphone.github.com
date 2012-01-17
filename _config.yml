@@ -1,24 +1,32 @@
-# This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
+# 基础设置
+# url样式
 permalink: /:categories/:year/:month/:day/:title 
+# 自动处理更新
 auto: true
+# 使用pygments来处理语法高亮
 pygments: true
+# markdown标记语言格式
 markdown: rdiscount
+# 开启相关文章推荐
 LSI : true
+
+#站点属性设置
 var:
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
 
+# 作者信息
 production_url : http://hailongiphone.github.com # or your custom domain name
 title : HaiLong 
 
 author :
   name : HalLong 
-  email : ghl_hh@hotmail.com
+  email : guohailong.hh@hotmail.com
   github : hailongiphone
   twitter : @HaiLongGuo
 
+# 站点名称 描述
 title1 : hai
 title2 : Long
 siteDescription :  记录 | 轨迹
