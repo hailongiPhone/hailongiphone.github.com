@@ -1,7 +1,7 @@
 ---
 layout : post
-categories : 命令行工具
-tags : [Ftp,命令行工具]
+categories : TerminalCommands
+tags : [Ftp,Terminal，Commands]
 ---
 
 
