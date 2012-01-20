@@ -77,13 +77,21 @@
           <li><a href="#">link 3</a></li>
           <li><a href="#">link 4</a></li>
         </ul>
+        <!-- 搜索模块 -->
         <h1>Search</h1>
-        <form method="post" action="#" id="search_form">
-          <p>
-            <input class="search" type="text" name="search_field" value="Enter keywords….." />
-            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
-          </p>
-        </form>
+       		<form method="get" action="http://www.google.com/search" target="google_window">
+			<label class="hidden" for="s">Search...</label>
+			<div>	
+			<input type="text" value="Search..." name="q" />
+			<input type="submit" name=”btnG” id="searchsubmit" value="Search" />
+			</div>
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="hidden" name="oe" value="UTF-8" />
+				<input type="hidden" name="hl" value="zh-CN" />
+			<!-- 这里只需把"http://hailongiphone.github.com"替换成你所要搜索的站 -->
+			<input type="hidden" name="domains" value="http://hailongiphone.github.com" />
+			<input type="hidden" name="sitesearch" value="http://hailongiphone.github.com" />
+		</form>
       </div>
        {{ content }}
     </div>
