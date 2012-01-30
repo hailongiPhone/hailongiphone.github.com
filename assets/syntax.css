@@ -3,7 +3,7 @@
 .highlight  .c { font-weight: bold; color: #069000; } /* Comment */
 .highlight  .err { font-weight: bold; color: #14961a; border: 1px solid #FF0000 } /* Error */
 .highlight  .k { color: #a306bf; font-weight: bold } /* Keyword */
-.highlight  .o { color: #104cb3 } /* Operator */
+.highlight  .o { color: #e5dfe5 } /* Operator */
 .highlight  .cm { font-weight: bold; color: #03ac00; } /* Comment.Multiline */
 .highlight  .cp { font-weight: bold; color: #00a513 } /* Comment.Preproc */
 .highlight  .c1 { font-weight: bold; color: #079e0e; } /* Comment.Single */
@@ -25,16 +25,16 @@
 .highlight  .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
 .highlight  .kt { color: #902000 } /* Keyword.Type */
 .highlight  .m { color: #40a070 } /* Literal.Number */
-.highlight  .s { color: #4070a0 } /* Literal.String */
-.highlight  .na { color: #4070a0 } /* Name.Attribute */
-.highlight  .nb { color: #007020 } /* Name.Builtin */
-.highlight  .nc { color: #0a5ec6; font-weight: bold } /* Name.Class */
-.highlight  .no { color: #60add5 } /* Name.Constant */
-.highlight  .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight  .s { color: #b00e19 } /* Literal.String */
+.highlight  .na { color: #6739d7 } /* Name.Attribute */
+.highlight  .nb { color: #841b96 } /* Name.Builtin */
+.highlight  .nc { color: #1541c6; font-weight: bold } /* Name.Class */
+.highlight  .no { color: #592fd5 } /* Name.Constant */
+.highlight  .nd { color: #3052d2; font-weight: bold } /* Name.Decorator */
 .highlight  .ni { color: #d55537; font-weight: bold } /* Name.Entity */
 .highlight  .ne { color: #007020 } /* Name.Exception */
 .highlight  .nf { color: #06287e } /* Name.Function */
-.highlight  .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight  .nl { color: #1856d1; font-weight: bold } /* Name.Label */
 .highlight  .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
 .highlight  .nt { color: #062873; font-weight: bold } /* Name.Tag */
 .highlight  .nv { color: #bb60d5 } /* Name.Variable */
