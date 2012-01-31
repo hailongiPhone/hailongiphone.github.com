@@ -133,6 +133,7 @@ predicate = [predicateTemplate predicateWithSubstitutionVariables:
 ### Format String Summary
 上面讲完了初始化NSPredicate的3种方式，
 总结下在格式化字符串中出现的关键字占位符
+
 %@ 如同printf，替换为对应变量的description
 %K 替换为动态的属性名
 $variable 替换为表达式
