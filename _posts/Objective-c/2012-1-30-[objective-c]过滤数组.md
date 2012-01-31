@@ -1,8 +1,11 @@
 ---
 layout : post
 categories : Objective-c
-tags : [Objecitve-c,Code]
+tags : [Objecitve-c,Code,NSPredicate]
 ---
+
+## 内容提要：
+主要介绍如何使用NSPredicate过滤NSArray
 
 ## 使用到的对象有：
 
