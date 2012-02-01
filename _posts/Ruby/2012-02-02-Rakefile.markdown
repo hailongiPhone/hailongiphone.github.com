@@ -1,11 +1,11 @@
 ---
-layout: post
-category: Ruby
-title: Rakefile
-date: 2012-02-02  1:41:04
+layout : post
+category : Ruby
+title : Rakefile
+tags : [Rakefile,Ruby]
 ---
 
-{% highlight ruby%}
+{% highlight ruby %}
 desc 'Create new post with rake "post[post-name]"'
 task :post, [:title,:category] do |t, args|
   if args.title then
@@ -40,4 +40,4 @@ def new_post(title,category)
       end
    `git add #{path}`
 end
-{& endhighlight&}
+{% endhighlight %}
