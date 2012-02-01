@@ -1,0 +1,6 @@
+    ---
+    layout: post
+    category: Ruby
+    title: Rakefile
+    date: 2012-02-02  1:41:04
+    ---
