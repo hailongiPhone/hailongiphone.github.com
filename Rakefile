@@ -78,12 +78,12 @@ def new_post(title,category)
     if File.exist? path; raise RuntimeError.new("Won't clobber #{path}"); end
       File.open(path, 'w') do |file|
         file.write <<-EOS
-    ---
-    layout: post
-    category: #{category}
-    title: #{title}
-    date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
-    ---
+---
+layout: post
+category: #{category}
+title: #{title}
+date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
+---
     EOS
       end
    `git add #{path}`
