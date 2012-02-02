@@ -15,7 +15,7 @@ tags : [Objecitve-c,Code,NSPredicate]
 
 ## 关键方法：
 
-NSArray 的 filteredArrayUsingPredicate
+> NSArray 的 filteredArrayUsingPredicate
 
 
 ## 示例代码如下
@@ -51,5 +51,14 @@ The syntax also contains the following other function, predicates and operations
    * ANY, ALL, NONE, IN
    * FALSE, TRUE, NULL, SELF
 
+
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@"lastName CONTAINS[cd] %@",
+				@"o"];
+Note that the [cd] next to the operator like causes it to ignore case and diacritics. Case is obvious, o = O. Diacritics are “ancillary glyphs added to a letter”, e.g. ó which is adding an accent to a plain o. With the [d] option o == ò == ö.
+
+
+
+#### 参考资料
+http://alexeckermann.com/tutorials/filtering-nsarray-with-nspredicate.html
 
 
