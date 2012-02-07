@@ -52,9 +52,9 @@ end
 desc 'Deploy with rake "depoly[comment]"'
 task :deploy, [:comment] => :generate do |t, args|
   if args.comment then
-    `git commit . -m '#{args.comment}' && git push`
+    `git add . && git commit -am '#{args.comment}' && git push`
   else
-    `git commit . -m 'new deployment' && git push`
+    `git add . && git commit -am 'new deployment' && git push`
   end
 end
 
@@ -86,5 +86,5 @@ date: #{Time.now.strftime('%Y-%m-%d %k:%M:%S')}
 ---
     EOS
       end
-   `git add #{path}`
+   `git add . && mvim #{path}`
 end
