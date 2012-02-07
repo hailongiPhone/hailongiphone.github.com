@@ -15,7 +15,13 @@ p
   line-height: 1.7em;}
 
 img
-{ border: 0;}
+{ max-width: 613px; border: 0;
+
+ /* Experimental CSS3 stuff */
+	box-shadow: 4px 4px 12px #676767;
+	-webkit-box-shadow: 4px 4px 12pxx #676767;
+	-moz-box-shadow: 4px 4px 12px #676767;
+}
 
 h1, h2, h3, h4, h5, h6 
 { font: normal 179% 'century gothic', arial, sans-serif;
