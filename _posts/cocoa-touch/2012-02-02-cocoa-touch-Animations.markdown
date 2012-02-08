@@ -2,7 +2,6 @@
 layout : post
 category : cocoa-touch
 title : cocoa-touch-Animations
-tags ： [Cocoa-touch，iOS，Animations]
 ---
 
 ## 在iOS开发中使用animation方法一般有两种：
