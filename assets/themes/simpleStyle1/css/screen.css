@@ -329,6 +329,14 @@ table tr td
 whitewhite-space: -moz-pre-wrap; /* Mozilla, since 1999 */
 whitewhite-space: -pre-wrap; /* Opera 4-6 */
 whitewhite-space: -o-pre-wrap; /* Opera 7 */
+width: 610px;                                        
+                                                          
+                                            
+                                            
+max-width: 610px;                                        
+                                                          
+                                            
+                                            
 word-wrap: break-word; /* Internet Explorer 5.5+ */
 whitewhite-space : normal ; /* Internet Explorer 5.5+ */ 
                              }
