@@ -134,12 +134,15 @@ PS：这里也就是[@class VS. #import的利弊](http://stackoverflow.com/quest
 	
 {% highlight objc %}
 @class HLClassA;
+@protocol ClassADelegate;
+
+@protocol ClassBDelegate;
+@interface HLClassB : NSObject<ClassADelegate>
+@property (nonatomic, strong) HLClassA * tmp;
+
 @protocol ClassBDelegate
 - (void)classBDelegate;
 @end
-@protocol ClassADelegate;
-@interface HLClassB : NSObject<ClassADelegate>
-@property (nonatomic, strong) HLClassA * tmp;
 @end
 {% endhighlight %}
 
