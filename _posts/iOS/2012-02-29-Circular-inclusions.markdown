@@ -45,8 +45,8 @@ HLClassB.h
 ## 具体问题出现原因解析：
    如果我们其他类ClassC中用到ClassA，引入A的头文件，首先处理的就是Line
 A1，这样就会import ClassB，处理执行到Line
-B1的位置，由于ClassA已经被ClassC引入所以忽略/不再引入（为什么忽略可以见#import
-与#include的区别）。继续执行，执行到Line B2 时就会报错，class
+B1的位置，由于ClassA已经被ClassC引入所以忽略/不再引入（为什么忽略可以见[#import
+与#include的区别](http://stackoverflow.com/questions/439662/what-is-the-difference-between-import-and-include-in-objective-c)）。继续执行，执行到Line B2 时就会报错，class
 A没有定义。
     如果我们先引入ClassB，首相处理到Line B1，处理继续则执行到Line
 A1,由于已经引入ClassB忽略，执行到Line A2，报错，未定义的ClassB
@@ -81,9 +81,7 @@ HLClassA.m
 {% endhighlight%}
 
     大家可以看出来主要的修改就是用@class替换掉了#import，把#import移到.m实现文件中。
-    PS：这里也就是[@class VS. #import的利弊](http://stackoverflow.com/questions/322597/class-vs-import)
-    
-    
+PS：这里也就是[@class VS. #import的利弊](http://stackoverflow.com/questions/322597/class-vs-import)
 
 ## 问题描述
 
