@@ -1,15 +1,23 @@
 ---
 layout: page
 title: About
-permalink: /about/
+header: About Me
+group: About Me
+menuSelected: {About : "selected"}
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+# _About_
+
+_haiLong_   
+
+
+- 自2009年开始从事iOS开发     
+- 客观的记录    
+
+*****
+
+# 工作经历
+- 2007-2008  [gameloft智乐软件成都有限公司](http://www.gameloft.com/)   
+- 2009 至今    [成都知迅软件技术有限公司 ](http://www.e-global-agent.com/)  

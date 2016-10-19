@@ -1,41 +1,22 @@
 # ---------------
-# Site settings 全局常量
-#   通过  {{ site.title }} 方式获取变量
-#   常量-- 原因是对_config的修改不会自动更新 必须手动编译 jekyll serve
-#         时常修改的变量--或者希望修改后自动更新（watch）使用_data file
+# _config.yml
+#         1：编译相关配置
+#         2：URL显示
+#         3：默认值设置
+#         4：全局常量  （通过site可以获取）
+#             4.1：预设
+#             4.2：用户自定义
+#
 # ---------------
-#不同的方式来定义属性 -- 扁平化
-title: config_title
-email: config_email
-description: config_description
-twitter_username: jekyllrb
-github_username:  jekyll
-#不同的方式来定义属性 -- 类聚
-author :
-  name : HalLong
-  email : guohailong.hh@gmail.com
-  github : hailongiphone
-  twitter : @HaiLongGuo
 
 #-------------------
-#   URL 相关设置
-#-------------------
-baseurl: ""     # the subpath of your site, e.g. /blog
-url: "http://example.com"   # the base hostname & protocol for your
-#url样式
-permalink: /:categories/:year/:month/:day/:title
-
-#-------------------
-#   Build settings
+#   1：Build settings
 #-------------------
 markdown: kramdown
-pygments: true # 使用pygments来处理语法高亮
-auto: true  # 自动处理更新
+highlighter: pygments # 使用pygments来处理语法高亮
+# auto: true  # 自动处理更新
 LSI : true  # 开启相关文章推荐
 # theme: minima
-
-
-
 
 exclude:
   - "README.md"
@@ -44,8 +25,23 @@ exclude:
   - "Gemfile"
   - "Gemfile.lock"
 
+#翻页效果
+paginate: 10
+paginate_path: ":num"
+
+
 #-------------------
-#   默认值设置
+#   2：URL 相关设置
+#-------------------
+baseurl: ""     # the subpath of your site, e.g. /blog
+url: ""   # the base hostname & protocol for your
+#url样式
+permalink: /:categories/:year/:month/:day/:title
+
+
+
+#-------------------
+#   3：默认值设置
 #-------------------
 defaults:
   -
@@ -60,3 +56,31 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+
+
+# ---------------
+#   4：Site settings 全局常量
+# ---------------
+
+#   通过  {{ site.title }} 方式获取变量
+#   常量-- 原因是对_config的修改不会自动更新 必须手动编译 jekyll serve
+#   时常修改的变量--或者希望修改后自动更新（watch）使用_data file
+
+#不同的方式来定义属性 -- 扁平化
+title: config_title
+email: config_email
+description: config_description
+twitter_username: jekyllrb
+github_username:  jekyll
+#不同的方式来定义属性 -- 类聚
+author :
+  name : HalLong
+  email : guohailong.hh@gmail.com
+  github : hailongiphone
+  twitter : HaiLongGuo
+
+var:
+  archive_path: /archive.html
+  categories_path : /categories.html
+  tags_path : /tags.html
