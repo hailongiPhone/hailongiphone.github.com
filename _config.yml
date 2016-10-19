@@ -1,0 +1,62 @@
+# ---------------
+# Site settings 全局常量
+#   通过  {{ site.title }} 方式获取变量
+#   常量-- 原因是对_config的修改不会自动更新 必须手动编译 jekyll serve
+#         时常修改的变量--或者希望修改后自动更新（watch）使用_data file
+# ---------------
+#不同的方式来定义属性 -- 扁平化
+title: config_title
+email: config_email
+description: config_description
+twitter_username: jekyllrb
+github_username:  jekyll
+#不同的方式来定义属性 -- 类聚
+author :
+  name : HalLong
+  email : guohailong.hh@gmail.com
+  github : hailongiphone
+  twitter : @HaiLongGuo
+
+#-------------------
+#   URL 相关设置
+#-------------------
+baseurl: ""     # the subpath of your site, e.g. /blog
+url: "http://example.com"   # the base hostname & protocol for your
+#url样式
+permalink: /:categories/:year/:month/:day/:title
+
+#-------------------
+#   Build settings
+#-------------------
+markdown: kramdown
+pygments: true # 使用pygments来处理语法高亮
+auto: true  # 自动处理更新
+LSI : true  # 开启相关文章推荐
+# theme: minima
+
+
+
+
+exclude:
+  - "README.md"
+  - "CHANGELOG.md"
+  - "CNAME"
+  - "Gemfile"
+  - "Gemfile.lock"
+
+#-------------------
+#   默认值设置
+#-------------------
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
