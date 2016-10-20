@@ -12,8 +12,13 @@
 #-------------------
 #   1：Build settings
 #-------------------
+highlighter: rouge
 markdown: kramdown
-highlighter: pygments # 使用pygments来处理语法高亮
+kramdown:
+  input:  GFM
+  syntax_highlighter: rouge
+# markdown: kramdown
+# highlighter: pygments # 使用pygments来处理语法高亮
 # auto: true  # 自动处理更新
 LSI : true  # 开启相关文章推荐
 # theme: minima
