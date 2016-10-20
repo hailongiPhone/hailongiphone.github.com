@@ -6,9 +6,9 @@
  * 页面ready方法
  */
 $(document).ready(function() {
-
+    // alert("aaaaa")
     console.log("你不乖哦，彼此之间留点神秘感不好吗？");
-
+    $(".button-collapse").sideNav();
     backToTop();
     search();
 });
@@ -50,8 +50,3 @@ function search(){
 
     _st('install','{{site.swiftype_searchId}}','2.0.0');
 }
-
-
-
-
-

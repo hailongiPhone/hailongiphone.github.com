@@ -78,6 +78,8 @@ email: config_email
 description: config_description
 twitter_username: jekyllrb
 github_username:  jekyll
+
+repository: hailongiphone.github.io.
 #不同的方式来定义属性 -- 类聚
 author :
   name : HalLong
