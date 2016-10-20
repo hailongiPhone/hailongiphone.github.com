@@ -1,5 +1,5 @@
 <header>
-   <div class="navbar-fixed">
+   <!-- <div class="navbar-fixed"> -->
     <nav>
         <div class="nav-wrapper">
             <a href="{{ site.baseurl | prepend: site.url }}/" class="brand-logo">{{ site.title }}</a>
@@ -18,12 +18,17 @@
             </ul>
 
             <ul class="side-nav" id="mobile-demo">
-              <li><a href="sass.html">Sass</a></li>
-              <li><a href="badges.html">Components</a></li>
-              <li><a href="collapsible.html">Javascript</a></li>
-              <li><a href="mobile.html">Mobile</a></li>
+              {% assign navigation_pages = site.pages | sort: 'navigationWeight' %}
+
+              {% for p in navigation_pages %}
+                {% if p.navigationWeight > 0 %}
+                  <li>
+                    <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
             </ul>
         </div>
     </nav>
-    </div>
+    <!-- </div> -->
 </header>
