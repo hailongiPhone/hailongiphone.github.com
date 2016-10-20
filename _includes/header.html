@@ -9,22 +9,29 @@
               {% assign navigation_pages = site.pages | sort: 'navigationWeight' %}
 
               {% for p in navigation_pages %}
-                {% if p.navigationWeight > 0 %}
-                  <li>
-                    <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}><i class="material-icons left">search</i>{{ p.title }}</a>
-                  </li>
+                {% if p.navigationWeight %}
+                  {% unless p.url contains 'Paginate' %}
+                    <li>
+                      <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}><i class="material-icons left">search</i>{{ p.title }}</a>
+                    </li>
+                  {% endunless %}
                 {% endif %}
               {% endfor %}
             </ul>
 
             <ul class="side-nav" id="mobile-demo">
-              {% assign navigation_pages = site.pages | sort: 'navigationWeight' %}
+              {% assign navigation_pages = site.html_pages | sort: 'navigationWeight' %}
 
               {% for p in navigation_pages %}
                 {% if p.navigationWeight > 0 %}
-                  <li>
-                    <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title }}</a>
-                  </li>
+                  {% unless p.url contains 'Paginate' %}
+                    <script type="text/javascript">
+                      console.log("{{p.url}} {{ p.title }}");
+                    </script>
+                    <li>
+                      <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title }}</a>
+                    </li>
+                  {% endunless %}
                 {% endif %}
               {% endfor %}
             </ul>

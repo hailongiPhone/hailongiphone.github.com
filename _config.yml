@@ -23,16 +23,16 @@ kramdown:
 LSI : true  # 开启相关文章推荐
 # theme: minima
 
-exclude:
-  - "README.md"
-  - "CHANGELOG.md"
-  - "CNAME"
-  - "Gemfile"
-  - "Gemfile.lock"
+# exclude:
+#   - "README.md"
+#   - "CHANGELOG.md"
+#   - "CNAME"
+#   - "Gemfile"
+#   - "Gemfile.lock"
 
 #翻页效果
 paginate: 10
-paginate_path: ":num"
+paginate_path: "/homePaginate/page:num"
 
 
 #-------------------
@@ -48,19 +48,19 @@ permalink: /:categories/:year/:month/:day/:title
 #-------------------
 #   3：默认值设置
 #-------------------
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+# defaults:
+#   -
+#     scope:
+#       path: ""
+#       type: "pages"
+#     values:
+#       layout: "default"
+#   -
+#     scope:
+#       path: ""
+#       type: "posts"
+#     values:
+#       layout: "post"
 
 
 
