@@ -10,7 +10,7 @@
 
               {% for p in navigation_pages %}
                 {% if p.navigationWeight %}
-                  {% unless p.url contains 'Paginate' %}
+                  {% unless p.url contains site.paginate_baseurl %}
                     <li>
                       <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}><i class="material-icons left">search</i>{{ p.title }}</a>
                     </li>
@@ -24,7 +24,7 @@
 
               {% for p in navigation_pages %}
                 {% if p.navigationWeight > 0 %}
-                  {% unless p.url contains 'Paginate' %}
+                  {% unless p.url contains site.paginate_baseurl %}
                     <script type="text/javascript">
                       console.log("{{p.url}} {{ p.title }}");
                     </script>

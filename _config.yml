@@ -32,7 +32,8 @@ LSI : true  # 开启相关文章推荐
 
 #翻页效果
 paginate: 10
-paginate_path: "/homePaginate/page:num"
+paginate_baseurl: "/homePaginate/"
+paginate_path: "/homePaginate/:num"
 
 
 #-------------------

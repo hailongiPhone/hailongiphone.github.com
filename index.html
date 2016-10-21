@@ -36,27 +36,33 @@ navigationWeight: 1
 
           <div class="pad-mid"></div>
 
-          <nav class="text-center">
+          <!-- <nav class="text-center"> -->
               <ul class="pagination">
                 {% if paginator.total_pages > 1 %}
-                  {% if paginator.previous_page %}
-                        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                  {% endif %}
+                  <li {% if !paginator.previous_page %} class="disabled" {% endif %}>
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url }}">
+                      <i class="material-icons">chevron_left</i>
+                    </a>
+                  </li>
+
                   {% for page in (1..paginator.total_pages) %}
                       {% if page == paginator.page %}
                         <li class="active"><span>{{ page }}</span></li>
                       {% elsif page == 1 %}
-                        <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url  }}">{{ page }}</a></li>
+                        <li class="waves-effect"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url  }}">{{ page }}</a></li>
                       {% else %}
-                        <li><a href="{{ page |  prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ page }}</a></li>
+                        <li><a href="{{ page| prepend: site.paginate_baseurl | prepend: site.baseurl | prepend: site.url }}">{{ page }}</a></li>
                       {% endif %}
                   {% endfor %}
-                  {% if !paginator.next_page %}
-                        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                  {% endif %}
+
+                  <li {% if !paginator.next_page %} class="disabled" {% endif %}>
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}">
+                      <i class="material-icons">chevron_right</i>
+                    </a>
+                  </li>
                 {% endif %}
               </ul>
-          </nav>
+          <!-- </nav> -->
       </div>
   </div>
 </div>
