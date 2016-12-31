@@ -1,0 +1,40 @@
+---
+layout: page
+title: PagesTitle 
+header: PagesHeader
+group: example-pageGroup
+menuSelected: {Pages : "selected"}
+---
+
+<h2>All Pages</h2>
+{% assign pages_list = site.pages %}
+{% include helpers/pages_list.html %}
+
+
+<h2>Pages in group: project</h2>
+{% assign pages_list = site.pages %}
+{% assign group = 'project' %}
+{% include helpers/pages_list.html %}
+
+
+<h2>Pages in group: example-page</h2>
+{% assign pages_list = site.pages %}
+{% assign group = 'example-page' %}
+{% include helpers/pages_list.html %}
+
+{%comment%}
+<h2>显示所有的header信息</h2>
+{% for header in site.header %}
+		<h2>{{header}}</h2>	
+{% endfor %}		
+
+<h2>显示所有的pages信息</h2>
+{% for aGroup in site.pages %}
+		<h2>{{aGroup.title}}</h2>	
+{% endfor %}		
+
+<h2>显示所有的site信息</h2>
+		<h2>{{site.group}}</h2>	
+<h2>显示所有的pages信息</h2>
+		<h2>{{site.pages}}</h2>	
+		{%endcomment%}
