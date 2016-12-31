@@ -1,6 +1,6 @@
 ---
 layout: post
-category: 
+category:
 title: Circular inclusions
 date: 2012-02-29 12:35:53
 ---
@@ -86,8 +86,8 @@ PS：这里也就是[@class VS. #import的利弊](http://stackoverflow.com/quest
 ## 问题描述
 
 	上面讲了对于类对象出现的相互引用，如果两个类A，B,都要实现对方的代理会如何？
-	
-	
+
+
 	代码如下：
 	ClassA.h 定义代理ClassADelegat
 {% highlight objc%}
@@ -104,7 +104,7 @@ PS：这里也就是[@class VS. #import的利弊](http://stackoverflow.com/quest
 @end
 @end
 	{% endhighlight %}
-	
+
 	ClassB.h 定义代理ClassBDelegat
 {% highlight objc%}
 
@@ -118,20 +118,20 @@ PS：这里也就是[@class VS. #import的利弊](http://stackoverflow.com/quest
 @protocol ClassBDelegate
 - (void)classBDelegate;
 @end
-@end	
+@end
 {% endhighlight %}
-	
+
 	编译运行：
 	![Image](/images/Debug/Debug_Circular_inclusions_delegate.png "代理循环")
-	
+
 	找不到定义的代理协议protocol。
-	
+
 ## 解决方法：
 	有了之前的经验，我们可以看出，还是的执行到自己的line 2的地方，对方的Line 1都还没有处理。
 	那能否直接加协议提前声明？
-	
+
 	但是协议的提前声明似乎只在同一个文件有用，我们修改ClassB.h如下
-	
+
 {% highlight objc %}
 @class HLClassA;
 @protocol ClassADelegate;
@@ -148,7 +148,7 @@ PS：这里也就是[@class VS. #import的利弊](http://stackoverflow.com/quest
 
 	可以通过编译，但有警告：
 	Cannot find protocol declaration for 'HLClassADelegate'; did you mean 'HLClassBDelegate'?
-	
+
 	最后的解决办法就是把协议提到单独的头文件中，在需要使用的地方直接引入
 修改后的ClassA.h
 {% highlight objc %}
@@ -175,5 +175,3 @@ HLClassBDelegate.h文件
 	所以为了更好的避免这种隐形的大循环
 	最好用@class 代替 #import.
 	协议最好单独写在一个头文件中.
-	
-	

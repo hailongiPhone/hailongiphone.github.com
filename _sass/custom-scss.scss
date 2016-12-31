@@ -1,1 +1,260 @@
 // Add your own custom CSS here.
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/material-design-icons/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../fonts/material-design-icons/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../fonts/material-design-icons/MaterialIcons-Regular.woff) format('woff'),
+       url(../fonts/material-design-icons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+// $roboto-font-path: "../fonts/roboto/";
+
+
+a {
+	color: #ff9800; // orange-text
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.6;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	color: #585858;
+}
+
+p {
+	@include font-size($p-font-sizes);
+}
+
+h1 {
+  @include font-size($h1-font-sizes);
+}
+
+h2 {
+	@include font-size($h2-font-sizes)
+}
+
+h3 {
+	@include font-size($h3-font-sizes)
+}
+
+blockquote {
+	margin: 20px 0;
+	padding-left: 1.5rem;
+	border-left: 5px solid #666;
+	font-style: italic;
+	font-weight: 300;
+	color: #666;
+}
+
+.dropdown-content {
+	min-width: 200px;
+}
+
+
+.book-list {
+    margin: 20px auto;
+
+    h1 {
+        margin-top: 0;
+        //font-size: 2.2em;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+.scrollToTop {
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    display: none;
+
+    i {
+    font-size: 50px;
+    }
+}
+
+.divider {
+    margin: 25px 0;
+   // height: 1px;
+   // background: #444;
+   // background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #444));
+}
+
+.divider-arrow {
+  height: 1px;
+  background: #d1d1d1;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  span {
+    position: relative;
+    top: -1.2em;
+  }
+}
+.preloader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow: visible;
+}
+
+.nav-center {
+    margin: 0 auto;
+    width: 307px;
+}
+
+.post-image {
+
+	clear: both;
+	display: block;
+	margin: 20px auto 0;
+	text-align: center;
+	box-shadow: 1px 1px 4px #8E8E8E;
+
+	figcaption {
+		margin-bottom: 2.5em;
+		max-width: 100%;
+		font-size: 0.8em;
+	    background-color: #F5EFEF;
+		padding: 10px;
+	}
+
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+	font-size: 3em;
+}
+.sub-title {
+
+}
+
+.space {
+    display: block;
+    position: relative;
+    clear: both;
+    margin: 50px auto;
+}
+
+.home-post {
+
+    h1 {
+        //font-size: 2.2em;
+    }
+}
+
+.collection {
+    h1 {
+        //font-size: 2.2em;
+    }
+}
+
+.entry-container {
+    padding: 35px;
+}
+
+h1.entry-title {
+	margin-bottom: 5px;
+}
+
+.entry-meta {
+	font-size: 100%;
+	color: #666;
+
+	li {
+		display: inline;
+		margin-right: 10px;
+
+		@media #{$medium-and-down} {
+			display: table;
+		}
+	}
+}
+
+.card-content {
+
+	img {
+			max-width: 100%;
+			height: auto;
+			margin-top: 15px;
+			margin-bottom: 10px;
+	}
+	 p {
+		 margin: 0 auto 10px!important;
+		 text-align: justify;
+	 }
+}
+
+.date {
+	text-transform: uppercase;
+}
+.prev-next {
+	li {
+		display: inline;
+	}
+}
+.about-text {
+    text-align: justify;
+}
+.about {
+
+	@media #{$medium-and-down} {
+
+		h1 {
+			text-align: center;
+		}
+
+		img {
+			display: block;
+	    	margin-left: auto;
+	    	margin-right: auto;
+
+			margin-bottom: 10px;
+
+		}
+
+  	}
+}
+.social {
+	a {
+		margin-left: 10px;
+	}
+}

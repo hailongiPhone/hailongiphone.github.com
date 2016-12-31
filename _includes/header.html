@@ -1,25 +1,25 @@
 <header>
-   <!-- <div class="navbar-fixed"> -->
+   <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper">
             <a href="{{ site.baseurl | prepend: site.url }}/" class="brand-logo">{{ site.title }}</a>
 
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
               {% assign navigation_pages = site.pages | sort: 'navigationWeight' %}
 
               {% for p in navigation_pages %}
                 {% if p.navigationWeight %}
                   {% unless p.url contains site.paginate_baseurl %}
                     <li>
-                      <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}><i class="material-icons left">search</i>{{ p.title }}</a>
+                      <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}><span class="octicon octicon-clippy"></span><i class="material-icons left">search</i>{{ p.title }}</a>
                     </li>
                   {% endunless %}
                 {% endif %}
               {% endfor %}
             </ul>
 
-            <ul class="side-nav" id="mobile-demo">
+            <ul class="side-nav" id="nav-mobile">
               <div class="collection">
               {% assign navigation_pages = site.html_pages | sort: 'navigationWeight' %}
 
@@ -35,5 +35,5 @@
             </ul>
         </div>
     </nav>
-    <!-- </div> -->
+    </div>
 </header>

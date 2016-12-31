@@ -3,8 +3,11 @@
 ---
 @charset "utf-8";
 
+// icon图片
+@import "../fonts/octicons/octicons.css";
+
 // 自定义引入scss
-@import "custom-bootstrap-variables";
 @import "materialize-src/sass/materialize";
+@import "aeon-typo";
 @import "custom-scss";
 @import "_pygment_trac";

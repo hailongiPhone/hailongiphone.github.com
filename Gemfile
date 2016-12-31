@@ -22,4 +22,6 @@ gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
   # gem "jekyll-github-metadata", "~> 1.0"
   gem "jekyll-paginate"
+  gem "jekyll-compose"
+  gem 'jekyll-seo-tag'
 end

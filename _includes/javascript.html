@@ -1,0 +1,9 @@
+<script type="text/javascript" src="{{'/asset/js/jquery-2.1.1.min.js' | prepend:site.baseurl | prepend: site.url }}"></script>
+
+<script type="text/javascript" src="{{'/asset/js/materialize/bin/materialize.js' | prepend:site.baseurl | prepend: site.url  }}"></script>
+
+<script type="text/javascript" src="{{'/asset/js/script.js' | prepend:site.baseurl | prepend: site.url  }}"></script>
+
+
+{% for script in page.scripts %}<script type="text/javascript" src="{{'/asset/js/' | append:script | prepend:site.baseurl | prepend: site.url }}"></script>
+{%endfor%}

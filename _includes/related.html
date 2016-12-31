@@ -1,0 +1,20 @@
+<div class="row">   
+	<div class="">
+		<h1 class="header grey-text lighten-2">Posts Relacionados</h1>
+        {% for post in site.posts %}
+        {% assign match = false %}
+        {% for category in post.categories limit:3 %}
+        {% if page.categories contains category %}
+        {% assign match = true %}
+        {% endif %}
+        {% endfor %}
+        {% if match %}
+        <div class="col s12 m6">
+            <div class="collection">
+                <a href="{{ post.url}}" class="collection-item">{{ post.date | date_to_string }} - {{ post.title }}</a>
+              </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>

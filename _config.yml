@@ -31,9 +31,9 @@ LSI : true  # 开启相关文章推荐
 #   - "Gemfile.lock"
 
 #翻页效果
-paginate: 10
-paginate_baseurl: "/homePaginate/"
-paginate_path: "/homePaginate/:num"
+# paginate: 10
+# paginate_baseurl: "/homePaginate/"
+# paginate_path: "/homePaginate/:num"
 
 
 #-------------------
@@ -77,11 +77,16 @@ permalink: /:categories/:year/:month/:day/:title
 title: config_title
 email: config_email
 description: config_description
-twitter_username: jekyllrb
-github_username:  jekyll
+site_copyright:     © All Rights Reserved.
 
-repository: hailongiphone.github.io.
+#TODO
+# twitter_username: jekyllrb
+# github_username:  jekyll
+# google_analytics:   UA-44768500-1
+
+repository: hailongiphone.github.io
 #不同的方式来定义属性 -- 类聚
+
 author :
   name : HalLong
   email : guohailong.hh@gmail.com
@@ -92,3 +97,10 @@ var:
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
+
+
+
+gems:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-compose

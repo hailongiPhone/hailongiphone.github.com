@@ -1,0 +1,12 @@
+{% assign post = include.parampost %}
+
+<!-- <div class="col s12">
+  <ul class="collection hoverable"> -->
+    <li class="collection-item">
+      <span class="date"><strong class="orange-text">{{ post.date | date_to_string }}</strong> | <span class="grey-text light">{% if post.category %}{{ post.category }}{% elsif post.categories %}{{ post.categories }}{% else %}{{ post.tags }}{% endif %}</span></span>
+      <p>{{ post.excerpt }}</p>
+      <a href="{{ post.url }}" class="secondary-content">Read More</a>
+      <br>
+    </li>
+  <!-- </ul>
+</div> -->
