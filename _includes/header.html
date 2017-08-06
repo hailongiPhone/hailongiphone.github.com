@@ -1,6 +1,7 @@
 <header>
    <div class="navbar-fixed">
     <nav>
+      <div class="container">
         <div class="nav-wrapper">
             <a href="{{ site.baseurl | prepend: site.url }}/" class="brand-logo">{{ site.title }}</a>
 
@@ -11,8 +12,11 @@
               {% for p in navigation_pages %}
                 {% if p.navigationWeight %}
                   {% unless p.url contains site.paginate_baseurl %}
-                    <li>
-                      <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}><span class="octicon octicon-clippy"></span><i class="material-icons left">search</i>{{ p.title }}</a>
+                    <li {% if p.url == page.url %}class="active"{% endif %}>
+                      <a href="{{ p.url }}" {% if p.url == page.url %}class="active"{% endif %}>
+                        <!-- <span class="octicon octicon-clippy"></span> -->
+                        <!-- <i class="material-icons left">search</i> -->
+                        {{ p.title }}</a>
                     </li>
                   {% endunless %}
                 {% endif %}
@@ -34,6 +38,7 @@
             </div>
             </ul>
         </div>
+      </div>
     </nav>
     </div>
 </header>

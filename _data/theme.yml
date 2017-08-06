@@ -1,5 +1,6 @@
 # Theme customization is done on this file instead of _config.yml so that
 # you don't have to restart Jekyll to see changes.
+# 通过site.data 获取
 
 # Number of posts displayed on the home page.
 num_home_posts: 3

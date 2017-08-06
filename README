@@ -1,0 +1,35 @@
+###### 环境
+    ruby
+    jekyll
+    bundle
+
+    使用的renv管理ruby版本
+		renv
+			(修改为国内镜像网站下载安装ruby，
+				git clone https://github.com/andorchen/rbenv-china-mirror.git ~/.rbenv/plugins/rbenv-china-mirror
+
+			gem更新地址
+				$ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+				$ gem sources -l
+			)
+
+
+###### 调试运行
+    bundle exec jekyll serve
+    用浏览器查看：[http://localhost:4000](http://localhost:4000)
+
+###### 配置文件
+    _config.yml       -- 通过site可以获取，注意修改该文件不会自动更近到界面，需要重新运行
+    _data/theme.yml   -- Jekyll's data files 修改可以自动更新到界面，通过site.date.theme 可以获取
+    _sass             -- 可以由多个部分 组成main.scss,最终解析成main.css
+    .html/.md         -- 按照其中路径设置，解析成对应的html网页
+    其他               -- 作为资源文件直接拷贝
+    CNAME             -- 域名地址绑定
+
+###### 导航实现
+    读取所有的page按照 自定义属性 navigationWeight 值升序排列
+    navigation_pages = site.pages | sort: 'navigationWeight
+    当前查看界面高亮： 判断添加的page的url和当前正要显示的page的url是否一致
+
+######   脚本
+      Rakefile    快速发布等脚本--暂时没用

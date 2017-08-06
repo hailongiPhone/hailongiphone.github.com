@@ -49,7 +49,31 @@ body {
 	font-weight: 300;
 	text-rendering: optimizeLegibility;
 	color: #585858;
+
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
+
+main {
+    flex: 1 0 auto;
+}
+
+.nav-wrapper {
+  // padding-left: 20px;
+  // padding-right: 20px;
+  & a {
+    &.active {
+      // color: #ff9800; // orange-text
+    }
+  }
+}
+
+// category-slice {
+//   margin-top: calc(#{$collection-line-height / 2} - #{$badge-height / 2});
+// }
+
+
 
 p {
 	@include font-size($p-font-sizes);
@@ -158,10 +182,10 @@ blockquote {
 }
 
 .title {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 5px;
-	font-size: 3em;
+	  font-size: 1.2em;
 }
 .sub-title {
 
