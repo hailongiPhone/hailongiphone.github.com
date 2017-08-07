@@ -1,0 +1,60 @@
+---
+title: Home
+layout: default
+navigationWeight: 1
+navIcon:
+---
+  <section class="content">
+		<!-- <div class="container">
+			<div class="text-heading animated bounceInRight"> -->
+				<h1 class="header grey-text lighten-2">Blog</h1>
+			<!-- </div>
+		</div> -->
+	</section>
+
+  <!-- Loop output paged posts -->
+
+
+  {% for post in paginator.posts %}
+    <ul class="collection hoverable">
+      {% include post_card.html parampost=post %}
+    </ul>
+
+  {% endfor %}
+
+
+  <!-- Pagination links -->
+  <div class="col s4">
+  </div>
+  <div class="col s4">
+  <section>
+
+    <ul class="pagination">
+      {% if paginator.previous_page %}
+        <li class="waves-effect"><a href="{{ paginator.previous_page_path }}"><i class="material-icons">chevron_left</i></a></li>
+      {% else %}
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      {% endif %}
+
+      {% for i in (1..paginator.total_pages) %}
+        {% if i == paginator.page %}
+          <li class="active"><a href="#!">{{ i }}</a></li>
+        {% elsif i == 1 %}
+          <li class="waves-effect"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ i }}</a></li>
+        {% else %}
+          <li class="waves-effect"><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/'  | replace: ":num", i }}">{{ i }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+       {% if paginator.next_page %}
+         <li class="waves-effect"><a href="{{ paginator.next_page_path }}"><i class="material-icons">chevron_right</i></a></li>
+       {% else %}
+         <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+       {% endif %}
+
+     </ul>
+
+  </section>
+</div>
+<div class="col s4">
+</div>
