@@ -139,6 +139,8 @@ DEPENDENCIES
   jekyll-compose
   jekyll-paginate
   jekyll-seo-tag
+  kramdown
+  rouge
 
 RUBY VERSION
    ruby 2.3.1p112

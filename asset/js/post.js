@@ -6,9 +6,11 @@
  * 页面ready方法
  */
 $(document).ready(function() {
-    generateContent();
-    share();
-    disqus();
+    // generateContent();
+    // share();
+    // disqus();
+    $('#toc').toc();
+    // alert("I am an alert box!!");
 });
 
 /**

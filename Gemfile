@@ -24,4 +24,6 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-compose"
   gem 'jekyll-seo-tag'
+  gem 'rouge'
+  gem "kramdown"
 end
