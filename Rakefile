@@ -14,7 +14,7 @@ task :post, [:title,:category] do |t, args|
 end
 
 desc 'Run local server'
-task :generate => :clean do
+task :run => :clean do
   `bundle exec jekyll serve`
 end
 
