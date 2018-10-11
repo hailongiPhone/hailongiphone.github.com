@@ -126,14 +126,14 @@
   </url>
   
   <url>
-    <loc>http://hlnotes.com/tags/markdown/</loc>
+    <loc>http://hlnotes.com/categories/markdown/</loc>
     <lastmod>2018-10-11T21:55:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hlnotes.com/categories/markdown/</loc>
+    <loc>http://hlnotes.com/tags/markdown/</loc>
     <lastmod>2018-10-11T21:55:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
