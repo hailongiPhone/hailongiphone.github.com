@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rakefile on HLNotes</title>
+    <link>http://hlnotes.com/tags/rakefile/</link>
+    <description>Recent content in Rakefile on HLNotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://hlnotes.com/tags/rakefile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rakefile</title>
+      <link>http://hlnotes.com/post/ruby/2012-02-02-rakefile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ruby/2012-02-02-rakefile/</guid>
+      <description>desc &#39;Create new post with rake &amp;quot;post[post-name]&amp;quot;&#39; task :post, [:title,:category] do |t, args| if args.title then new_post(args.title,args.category) else puts &#39;rake &amp;quot;post[post-name]&amp;quot;&#39; end end def new_post(title,category) filename = &amp;quot;#{Time.now.strftime(&#39;%Y-%m-%d&#39;)}-#{title}.markdown&amp;quot; if category filename = File.join(&amp;quot;#{category}&amp;quot;, filename) path2 = File.join(&amp;quot;post&amp;quot;,category) if ! File.exist? path2 File.makedirs(path2) end end path = File.join(&amp;quot;posts&amp;quot;, filename) if File.exist? path; raise RuntimeError.new(&amp;quot;Won&#39;t clobber #{path}&amp;quot;); end File.open(path, &#39;w&#39;) do |file| file.write &amp;lt;&amp;lt;-EOS --- layout: post category: #{category} title: #{title} date: #{Time.</description>
+    </item>
+    
+  </channel>
+</rss>

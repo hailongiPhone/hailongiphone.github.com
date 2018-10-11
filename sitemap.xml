@@ -1,24 +1,216 @@
----
-layout: null
----
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    {% for post in site.posts %}
-    <url>
-        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
-    </url>
-    {% endfor %}
-    {% for post in site.pages %}{% if post.isNavItem %}
-    <url>
-        <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>weekly</changefreq>
-    </url>
-    {% endif %}
-    {% endfor %}
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://hlnotes.com/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://hlnotes.com/post/metadata/markdown%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2018-10-11T21:55:55+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/ios/2012-02-29-circular-inclusions/</loc>
+    <lastmod>2012-02-29T12:35:53+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/ios/2012-02-15-convert-plist-file-from-nsdata-to-nsdictionary/</loc>
+    <lastmod>2012-02-15T15:34:57+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/ios/2012-02-08-system-absolute-time/</loc>
+    <lastmod>2012-02-08T17:07:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/ios/2012-02-07-network-link-condition/</loc>
+    <lastmod>2012-02-07T11:57:11+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/ios/2012-02-03-how-to-build-horizontal-uitableview/</loc>
+    <lastmod>2012-02-03T14:31:35+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/ios/2012-02-03-load-uitableviewcell-from-xib/</loc>
+    <lastmod>2012-02-03T14:12:29+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/ios/2012-02-02-uitextview/</loc>
+    <lastmod>2012-02-02T16:49:15+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/core-samples/2011-12-29-jekyll-introduction/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/beginner/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/code/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/terminalcommands/2012-1-17-ftpcommands/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/ftp/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/</loc>
+    <lastmod>2018-10-11T21:55:55+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/intro/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/jekyll/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/markdown/</loc>
+    <lastmod>2018-10-11T21:55:55+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/categories/markdown/</loc>
+    <lastmod>2018-10-11T21:55:55+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/nspredicate/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/objecitve-c/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/categories/objective-c/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/</loc>
+    <lastmod>2018-10-11T21:55:55+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/rakefile/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/ruby/2012-02-02-rakefile/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/ruby/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/</loc>
+    <lastmod>2018-10-11T21:55:55+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/categories/terminalcommands/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/terminalcommands/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/tags/tutorial/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/cocoa-touch/2012-02-02-cocoa-touch-animations/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>

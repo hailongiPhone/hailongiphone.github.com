@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>cocoa-touch-Animations - HLNotes</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="HLNotes" />
+  <meta name="description" content="在iOS开发中使用animation方法一般有两种： UIView Animation Core Animation 常用的方法- UIView 下的Animation 作用与 UIView 最简单，最直接，当然功能效果也相对较" />
+
+  <meta name="keywords" content="HLNotes, iOS, Mobile, Swift, Objective-c, Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://hlnotes.com/post/cocoa-touch/2012-02-02-cocoa-touch-animations/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="cocoa-touch-Animations" />
+<meta property="og:description" content="在iOS开发中使用animation方法一般有两种： UIView Animation Core Animation 常用的方法- UIView 下的Animation 作用与 UIView 最简单，最直接，当然功能效果也相对较" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hlnotes.com/post/cocoa-touch/2012-02-02-cocoa-touch-animations/" />
+<meta itemprop="name" content="cocoa-touch-Animations">
+<meta itemprop="description" content="在iOS开发中使用animation方法一般有两种： UIView Animation Core Animation 常用的方法- UIView 下的Animation 作用与 UIView 最简单，最直接，当然功能效果也相对较">
+
+
+
+<meta itemprop="wordCount" content="999">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="cocoa-touch-Animations"/>
+<meta name="twitter:description" content="在iOS开发中使用animation方法一般有两种： UIView Animation Core Animation 常用的方法- UIView 下的Animation 作用与 UIView 最简单，最直接，当然功能效果也相对较"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Notes</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Notes</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">cocoa-touch-Animations</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        
+        <span class="more-meta"> 999 words </span>
+        <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#在ios开发中使用animation方法一般有两种">在iOS开发中使用animation方法一般有两种：</a>
+<ul>
+<li>
+<ul>
+<li><a href="#常用的方法">常用的方法-</a>
+<ul>
+<li>
+<ul>
+<li><a href="#如何使用uiview-animation">如何使用UIView animation</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#功能强大的core-animation">功能强大的Core Animation</a>
+<ul>
+<li>
+<ul>
+<li><a href="#常用的transform-functions">常用的Transform Functions</a></li>
+<li><a href="#常用的动画类型">常用的动画类型</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h2 id="在ios开发中使用animation方法一般有两种">在iOS开发中使用animation方法一般有两种：</h2>
+
+<ul>
+<li>UIView Animation</li>
+
+<li><p>Core Animation</p>
+
+<h4 id="常用的方法">常用的方法-</h4>
+
+<p>UIView 下的Animation 作用与 UIView
+最简单，最直接，当然功能效果也相对较少[如：只支持2D transformations]。
+能修改UIView的属性包括：</p></li>
+
+<li><p>frame：  可以达到修改UIView的size和position（注意都是相对与其父类坐标系）</p></li>
+
+<li><p>bounds：   达到修改UIView的size</p></li>
+
+<li><p>center： 达到修改UIView的position</p></li>
+
+<li><p>transform：    修改UIView的scale，rotate，或者移动UIVIew的中心点2D的transformations变换</p></li>
+
+<li><p>alpha：修改UIView的transparency透明度，用该属性达到渐隐渐现的效果</p></li>
+
+<li><p>backgroundColor： 修改UIView的背景颜色</p></li>
+
+<li><p>contentStretch： 修改UIView中的内容自动拉升填满可用空间？？？</p></li>
+</ul>
+
+<h6 id="如何使用uiview-animation">如何使用UIView animation</h6>
+
+<p>使用方式有两种：
+- Block-Based
+从iOS4以后，可以使用block的方式初始化动画。优点是可以嵌套。
+方法有：
+{% highlight objc %}
+- +animateWithDuration:animations:
+- +animateWithDuration:animations:completion:
+- +animateWithDuration:delay:options:animations:completion:
+{% endhighlight %}
+示例代码：
+{% highlight objc %}
+[UIView animateWithDuration:1.0 animations:^{
+        firstView.alpha = 0.0;
+        secondView.alpha = 1.0;
+}];
+{% endhighlight %}</p>
+
+<ul>
+<li>Begin/Commit模式
+通过beginAnimations:context: 和 commitAnimations 方法来定义动画代码块，在执行commit后，在这两个方法之内设点的动画属性，会动态的转变成最新设置的值。</li>
+</ul>
+
+<p>示例代码移动aView的
+{% highlight objc%}
+     UIView aV.frame = CGRectMake(0,0,100,100);
+        CGRect endFrame = CGRectMake(100,100,100,100)
+     [UIView beginAnimations:nil context:NULL];
+     [UIView setAnimationDuration:0.45];
+     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+     [aV setFrame:endFrame];
+     [UIView commitAnimations];
+   }
+{% endhighlight %}</p>
+
+<h4 id="功能强大的core-animation">功能强大的Core Animation</h4>
+
+<p>高性能，方便使用，支持更多效果，作用于CALayer
+- The size and position of the layer
+- The center point used when performing transformations
+- Transformations to the layer or its sublayers in 3D space
+- The addition or removal of a layer from the layer hierarchy
+- The layer’s Z-order relative to other sibling layers
+- The layer’s shadow
+- The layer’s border (including whether the layer’s corners are rounded)
+- The portion of the layer that stretches during resizing operations
+- The layer’s opacity
+- The clipping behavior for sublayers that lie outside the layer’s bounds
+- The current contents of the layer
+- The rasterization behavior of the layer</p>
+
+<p>需要注意的问题：
+- layer的坐标系
+Layer Coordinate System
+The coordinate system for layers differs depending on the current platform. In iOS, the default coordinate system origin is in the top-left corner of the layer and positive values extend down and to the right of that origin point.
+iOS中，左上角是原点，向下和向右为正值</p>
+
+<ul>
+<li>常用的 Key Path</li>
+<li>rotation.x  x轴旋转弧度</li>
+<li>rotation.y  y轴旋转弧度</li>
+<li>rotation.z  z轴旋转弧度</li>
+<li>rotation</li>
+<li>scale.x</li>
+<li>scale.y</li>
+<li>scale.z</li>
+<li>scale</li>
+<li>translation.x</li>
+<li>translation.y</li>
+<li>translation.z</li>
+<li>translation</li>
+</ul>
+
+<h6 id="常用的transform-functions">常用的Transform Functions</h6>
+
+<ul>
+<li>CATransform3DMakeTranslation</li>
+<li>CATransform3DTranslate</li>
+<li>CATransform3DMakeScale</li>
+<li>CATransform3DScale</li>
+<li>CATransform3DMakeRotation</li>
+<li>CATransform3DRotate</li>
+</ul>
+
+<h6 id="常用的动画类型">常用的动画类型</h6>
+
+<ul>
+<li>CABasicAnimation</li>
+<li>CAKeyframeAnimation</li>
+<li>CATransition</li>
+<li>CAAnimationGroup</li>
+</ul>
+
+<p>示例代码，把self.contentView向屏幕上方移动55个像素
+{% highlight objc %}
+CABasicAnimation * theAnimation=[CABasicAnimation animationWithKeyPath:@&ldquo;transform&rdquo;];</p>
+
+<pre><code>theAnimation.duration=0.35;
+theAnimation.repeatCount=1;
+theAnimation.autoreverses=NO;
+theAnimation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+theAnimation.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeTranslation(0, -55, 0)];
+
+theAnimation.removedOnCompletion = NO;
+theAnimation.fillMode = kCAFillModeForwards;
+
+[self.contentView.layer addAnimation:theAnimation forKey:@&quot;transform&quot;];
+</code></pre>
+
+<p>{% endhighlight %}</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">HLNotes</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">Markdown</span>
+      <span class="item-content"><a class="link-to-markdown" href="http://hlnotes.com/post/cocoa-touch/2012-02-02-cocoa-touch-animations/index.md" target="_blank">The Markdown version »</a></span>
+    </p>
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/ruby/2012-02-02-rakefile/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Rakefile</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="/lib/gitalk/gitalk-1.2.2.min.css">
+    <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    id: '0001-01-01 00:00:00 \x2b0000 UTC',
+    title: 'cocoa-touch-Animations',
+    clientID: 'bbb57c084f94eeddca95',
+    clientSecret: '982e7d9e957e2c42fedb167c4ca7d58d80670e13',
+    repo: 'HLNotesGitment',
+    owner: 'hailongiPhone',
+    admin: ['hailongiPhone'],
+    body: decodeURI(location.href)
+  });
+  gitalk.render('gitalk-container');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ghl_hh@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/321949/hailong" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/hailongiPhone" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/2460787/" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://hlnotes.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">HLNotes</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

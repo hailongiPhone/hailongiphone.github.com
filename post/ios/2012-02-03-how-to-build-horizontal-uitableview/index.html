@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to build Horizontal UITableView - HLNotes</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="HLNotes" />
+  <meta name="description" content="如何建立水平滑动的UITableView 最简单，最直接的做法： 在初始化UITableView的时候，旋转之。 在初始化tableViewcel" />
+
+  <meta name="keywords" content="HLNotes, iOS, Mobile, Swift, Objective-c, Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://hlnotes.com/post/ios/2012-02-03-how-to-build-horizontal-uitableview/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="How to build Horizontal UITableView" />
+<meta property="og:description" content="如何建立水平滑动的UITableView 最简单，最直接的做法： 在初始化UITableView的时候，旋转之。 在初始化tableViewcel" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hlnotes.com/post/ios/2012-02-03-how-to-build-horizontal-uitableview/" /><meta property="article:published_time" content="2012-02-03T14:31:35&#43;00:00"/>
+<meta property="article:modified_time" content="2012-02-03T14:31:35&#43;00:00"/>
+<meta itemprop="name" content="How to build Horizontal UITableView">
+<meta itemprop="description" content="如何建立水平滑动的UITableView 最简单，最直接的做法： 在初始化UITableView的时候，旋转之。 在初始化tableViewcel">
+
+
+<meta itemprop="datePublished" content="2012-02-03T14:31:35&#43;00:00" />
+<meta itemprop="dateModified" content="2012-02-03T14:31:35&#43;00:00" />
+<meta itemprop="wordCount" content="469">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to build Horizontal UITableView"/>
+<meta name="twitter:description" content="如何建立水平滑动的UITableView 最简单，最直接的做法： 在初始化UITableView的时候，旋转之。 在初始化tableViewcel"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Notes</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Notes</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to build Horizontal UITableView</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-02-03 </span>
+        
+        <span class="more-meta"> 469 words </span>
+        <span class="more-meta"> 1 min read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#如何建立水平滑动的uitableview">如何建立水平滑动的UITableView</a></li>
+<li><a href="#示例代码如下">示例代码如下：</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h2 id="如何建立水平滑动的uitableview">如何建立水平滑动的UITableView</h2>
+
+<p>最简单，最直接的做法：</p>
+
+<ul>
+<li>在初始化UITableView的时候，旋转之。</li>
+<li>在初始化tableViewcell的时候<strong>反旋转</strong>之。</li>
+</ul>
+
+<p>需要说明的是：
+    1 之所以tableview和cell的旋转方向不一样，是希望保证cell中的显示方向的正确性！
+    2 从L-&gt;R活动，则tableView向左旋转，CGAffineTransformMakeRotation(-M_PI * 0.5);
+                则其cell是向右旋转 CGAffineTransformMakeRotation(M_PI * 0.5);
+    从R-&gt;L 旋转方向相反。</p>
+
+<h2 id="示例代码如下">示例代码如下：</h2>
+
+<ul>
+<li><p>step 1 初始化UITableView
+{% highlight objc %}
+_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)
+                                          style:UITableViewStylePlain];
+_tableView.transform = CGAffineTransformMakeRotation(-M_PI * 0.5);
+// 关键点UITableView transform 需要注意的是transform后frame也发生变换，需要重新设置
+_tableView.frame = CGRectMake(KTableViewX, KTableViewY, kTableViewWidth ,kTableViewHeight) ;
+_tableView.showsVerticalScrollIndicator = NO;
+_tableView.showsHorizontalScrollIndicator = NO;</p>
+
+<p>_tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+_tableView.separatorColor = [UIColor blueColor];
+_tableView.dataSource = self;
+_tableView.delegate = self;
+_tableView.backgroundColor = [UIColor blueColor];
+[self.view addSubview:_tableView];
+{% endhighlight %}</p></li>
+
+<li><p>step 2 初始化UITableViewCell
+{% highlight objc %}</p></li>
+
+<li><p>(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+// Get section and row
+NSUInteger section;
+NSUInteger row;
+section = indexPath.section;
+row = indexPath.row;</p>
+
+<p>UITableViewCell* cell;
+cell = [tableView dequeueReusableCellWithIdentifier:@&ldquo;default&rdquo;];
+if (!cell) {</p>
+
+<pre><code>NSArray *toplavelobject=[[NSBundle mainBundle]loadNibNamed:@&quot;XIBNAME&quot; owner:self options:nil];
+for(id c in toplavelobject)
+{
+    if ([c isKindOfClass:[UITableViewCell class]])
+    {
+        cell=(UITableViewCell *) c;
+        break;
+    }
+}
+    // 关键点cell.transform
+cell.transform = CGAffineTransformMakeRotation(M_PI * 0.5);
+[cell setFrame:CGRectMake(0, 0, kTableViewCellWidth, kTableViewCellHeight)];
+</code></pre>
+
+<p>}
+cell.backgroundColor = [UIColor redColor];
+cell.textLabel.text = @&ldquo;default&rdquo;;</p>
+
+<p>return cell;
+}</p></li>
+</ul>
+
+<p>{% endhighlight %}</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">HLNotes</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2012-02-03</span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">Markdown</span>
+      <span class="item-content"><a class="link-to-markdown" href="http://hlnotes.com/post/ios/2012-02-03-how-to-build-horizontal-uitableview/index.md" target="_blank">The Markdown version »</a></span>
+    </p>
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/ios/2012-02-07-network-link-condition/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Network link condition</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/ios/2012-02-03-load-uitableviewcell-from-xib/">
+            <span class="next-text nav-default">load-UITableViewCell-From-Xib</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="/lib/gitalk/gitalk-1.2.2.min.css">
+    <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    id: '2012-02-03 14:31:35 \x2b0000 UTC',
+    title: 'How to build Horizontal UITableView',
+    clientID: 'bbb57c084f94eeddca95',
+    clientSecret: '982e7d9e957e2c42fedb167c4ca7d58d80670e13',
+    repo: 'HLNotesGitment',
+    owner: 'hailongiPhone',
+    admin: ['hailongiPhone'],
+    body: decodeURI(location.href)
+  });
+  gitalk.render('gitalk-container');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ghl_hh@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/321949/hailong" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/hailongiPhone" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/2460787/" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://hlnotes.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">HLNotes</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on HLNotes</title>
+    <link>http://hlnotes.com/tags/</link>
+    <description>Recent content in Tags on HLNotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Oct 2018 21:55:55 +0800</lastBuildDate>
+    
+	<atom:link href="http://hlnotes.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Beginner</title>
+      <link>http://hlnotes.com/tags/beginner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/beginner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Code</title>
+      <link>http://hlnotes.com/tags/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ftp</title>
+      <link>http://hlnotes.com/tags/ftp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/ftp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intro</title>
+      <link>http://hlnotes.com/tags/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/intro/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jekyll</title>
+      <link>http://hlnotes.com/tags/jekyll/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>http://hlnotes.com/tags/markdown/</link>
+      <pubDate>Thu, 11 Oct 2018 21:55:55 +0800</pubDate>
+      
+      <guid>http://hlnotes.com/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NSPredicate</title>
+      <link>http://hlnotes.com/tags/nspredicate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/nspredicate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Objecitve-c</title>
+      <link>http://hlnotes.com/tags/objecitve-c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/objecitve-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rakefile</title>
+      <link>http://hlnotes.com/tags/rakefile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/rakefile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>http://hlnotes.com/tags/ruby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terminal，Commands</title>
+      <link>http://hlnotes.com/tags/terminalcommands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/terminalcommands/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>http://hlnotes.com/tags/tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

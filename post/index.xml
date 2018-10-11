@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on HLNotes</title>
+    <link>http://hlnotes.com/post/</link>
+    <description>Recent content in Posts on HLNotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Oct 2018 21:55:55 +0800</lastBuildDate>
+    
+	<atom:link href="http://hlnotes.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown样式测试</title>
+      <link>http://hlnotes.com/post/metadata/markdown%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Thu, 11 Oct 2018 21:55:55 +0800</pubDate>
+      
+      <guid>http://hlnotes.com/post/metadata/markdown%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</guid>
+      <description>&lt;h2 id=&#34;markdown样式测试&#34;&gt;markdown样式测试&lt;/h2&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Circular inclusions</title>
+      <link>http://hlnotes.com/post/ios/2012-02-29-circular-inclusions/</link>
+      <pubDate>Wed, 29 Feb 2012 12:35:53 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ios/2012-02-29-circular-inclusions/</guid>
+      <description>关于循环引入的问题 ####### 英文Tag circular inclusions Circular dependency recursive includes 问题描述 如果两个类ClassA，ClassB，需要相互引入对方.此时无论外界先引入A、B，编译都不</description>
+    </item>
+    
+    <item>
+      <title>convert plist file from NSData to NSDictionary</title>
+      <link>http://hlnotes.com/post/ios/2012-02-15-convert-plist-file-from-nsdata-to-nsdictionary/</link>
+      <pubDate>Wed, 15 Feb 2012 15:34:57 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ios/2012-02-15-convert-plist-file-from-nsdata-to-nsdictionary/</guid>
+      <description>plist文件，在NSData与NSDictionary之间的转换 plist文件转换成NSData {% highlight objc %} NSString *plistPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@&amp;ldquo;plist&amp;rdquo;]; plistData = [NSData dataWithContentsOfFile:plistPath]; {% endhighlight objc %} pl</description>
+    </item>
+    
+    <item>
+      <title>System-Absolute-Time</title>
+      <link>http://hlnotes.com/post/ios/2012-02-08-system-absolute-time/</link>
+      <pubDate>Wed, 08 Feb 2012 17:07:35 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ios/2012-02-08-system-absolute-time/</guid>
+      <description>什么是系统绝对时间？ 绝对时间： 瞭解了一些時區的概念之後，這裡要談的是『什麼是正確的時間』。 在 1880 年代的時間標準是以 GMT 時間為主的，但是 GMT 時間是以</description>
+    </item>
+    
+    <item>
+      <title>Network link condition</title>
+      <link>http://hlnotes.com/post/ios/2012-02-07-network-link-condition/</link>
+      <pubDate>Tue, 07 Feb 2012 11:57:11 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ios/2012-02-07-network-link-condition/</guid>
+      <description>设置用于测试的网络环境 环境：lion 使用的工具： 苹果自带开发工具 Network link condition 安装 Network link condition在/Developer/Applicatio</description>
+    </item>
+    
+    <item>
+      <title>How to build Horizontal UITableView</title>
+      <link>http://hlnotes.com/post/ios/2012-02-03-how-to-build-horizontal-uitableview/</link>
+      <pubDate>Fri, 03 Feb 2012 14:31:35 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ios/2012-02-03-how-to-build-horizontal-uitableview/</guid>
+      <description>如何建立水平滑动的UITableView 最简单，最直接的做法： 在初始化UITableView的时候，旋转之。 在初始化tableViewcel</description>
+    </item>
+    
+    <item>
+      <title>load-UITableViewCell-From-Xib</title>
+      <link>http://hlnotes.com/post/ios/2012-02-03-load-uitableviewcell-from-xib/</link>
+      <pubDate>Fri, 03 Feb 2012 14:12:29 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ios/2012-02-03-load-uitableviewcell-from-xib/</guid>
+      <description>如何加载在xib中定义的UITableViewCell 主要还是使用NSBundle加载 关键代码如实： {% highlight objc %} //这里toplavelobje</description>
+    </item>
+    
+    <item>
+      <title>UITextView</title>
+      <link>http://hlnotes.com/post/ios/2012-02-02-uitextview/</link>
+      <pubDate>Thu, 02 Feb 2012 16:49:15 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ios/2012-02-02-uitextview/</guid>
+      <description>UITextView 在使用UITextView常遇到如下需求： - 键盘显示时，把界面上移 - 键盘隐藏时，界面下移 - 限制输入的字符数，并在界面上显示 - 监听键盘上Do</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/</guid>
+      <description>内容提要： 主要介绍如何使用NSPredicate过滤NSArray 使用到的对象有： NSArray NSPredicate 关键方法： NSArray 的 filteredArrayUsingPredicate 示例代码如下 {% highlight objc %} NSArray * tmp = [NSArray arrayWithObjects:@&amp;ldquo;test1&amp;rdquo;,@&amp;ldquo;test2&amp;rdquo;,@&amp;ldquo;test3&amp;rdquo;,@&amp;ldquo;test4&amp;rdquo;,@&amp;ldquo;test5&amp;rdquo;,@&amp;ldquo;test6&amp;rdquo;,@&amp;ldquo;test7&amp;rdquo;,@&amp;ldquo;test8&amp;rdquo;,@&amp;ldquo;test9&amp;rdquo;,@&amp;ldquo;test10&amp;rdquo;,@&amp;ldquo;test11&amp;rdquo;,@&amp;ldquo;test12&amp;rdquo;,@&amp;ldquo;test13&amp;rdquo;,@&amp;ldquo;test14&amp;rdquo;,@&amp;ldquo;test15&amp;rdquo;,@&amp;ldquo;test16&amp;rdquo;,@&amp;ldquo;test17&amp;rdquo;,@&amp;ldquo;test18&amp;rdquo;,@&amp;ldquo;test19&amp;rdquo;,@&amp;ldquo;test20&amp;rdquo;, nil]; NSArray *</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/</guid>
+      <description>内容： Predicate的基本知识和限制 如何创建predicate 介绍常用的 predicate 语法 基础介绍： 什么是predicate？ 一个predicate</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://hlnotes.com/post/core-samples/2011-12-29-jekyll-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/core-samples/2011-12-29-jekyll-introduction/</guid>
+      <description>This Jekyll introduction will outline specifically what Jekyll is and why you would want to use it. Directly following the intro we&amp;rsquo;ll learn exactly how Jekyll does what it does.
+Overview What is Jekyll? Jekyll is a parsing engine bundled as a ruby gem used to build static websites from dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as &amp;ldquo;a simple, blog aware, static site generator&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>FTP Commands</title>
+      <link>http://hlnotes.com/post/terminalcommands/2012-1-17-ftpcommands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/terminalcommands/2012-1-17-ftpcommands/</guid>
+      <description>[命令行工具]Ftp 本文用来记录使用到的Ftp基本命令。 本文涉及命令： 登陆远程服务器 上传文件 下载文件 登陆远程服务器 登陆方式一： 1 发送连接请求</description>
+    </item>
+    
+    <item>
+      <title>Rakefile</title>
+      <link>http://hlnotes.com/post/ruby/2012-02-02-rakefile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/ruby/2012-02-02-rakefile/</guid>
+      <description>desc &#39;Create new post with rake &amp;quot;post[post-name]&amp;quot;&#39; task :post, [:title,:category] do |t, args| if args.title then new_post(args.title,args.category) else puts &#39;rake &amp;quot;post[post-name]&amp;quot;&#39; end end def new_post(title,category) filename = &amp;quot;#{Time.now.strftime(&#39;%Y-%m-%d&#39;)}-#{title}.markdown&amp;quot; if category filename = File.join(&amp;quot;#{category}&amp;quot;, filename) path2 = File.join(&amp;quot;post&amp;quot;,category) if ! File.exist? path2 File.makedirs(path2) end end path = File.join(&amp;quot;posts&amp;quot;, filename) if File.exist? path; raise RuntimeError.new(&amp;quot;Won&#39;t clobber #{path}&amp;quot;); end File.open(path, &#39;w&#39;) do |file| file.write &amp;lt;&amp;lt;-EOS --- layout: post category: #{category} title: #{title} date: #{Time.</description>
+    </item>
+    
+    <item>
+      <title>cocoa-touch-Animations</title>
+      <link>http://hlnotes.com/post/cocoa-touch/2012-02-02-cocoa-touch-animations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/cocoa-touch/2012-02-02-cocoa-touch-animations/</guid>
+      <description>在iOS开发中使用animation方法一般有两种： UIView Animation Core Animation 常用的方法- UIView 下的Animation 作用与 UIView 最简单，最直接，当然功能效果也相对较</description>
+    </item>
+    
+  </channel>
+</rss>

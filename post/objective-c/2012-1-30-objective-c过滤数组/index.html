@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - HLNotes</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="HLNotes" />
+  <meta name="description" content="内容提要： 主要介绍如何使用NSPredicate过滤NSArray 使用到的对象有： NSArray NSPredicate 关键方法： NSArray 的 filteredArrayUsingPredicate 示例代码如下 {% highlight objc %} NSArray * tmp = [NSArray arrayWithObjects:@&amp;ldquo;test1&amp;rdquo;,@&amp;ldquo;test2&amp;rdquo;,@&amp;ldquo;test3&amp;rdquo;,@&amp;ldquo;test4&amp;rdquo;,@&amp;ldquo;test5&amp;rdquo;,@&amp;ldquo;test6&amp;rdquo;,@&amp;ldquo;test7&amp;rdquo;,@&amp;ldquo;test8&amp;rdquo;,@&amp;ldquo;test9&amp;rdquo;,@&amp;ldquo;test10&amp;rdquo;,@&amp;ldquo;test11&amp;rdquo;,@&amp;ldquo;test12&amp;rdquo;,@&amp;ldquo;test13&amp;rdquo;,@&amp;ldquo;test14&amp;rdquo;,@&amp;ldquo;test15&amp;rdquo;,@&amp;ldquo;test16&amp;rdquo;,@&amp;ldquo;test17&amp;rdquo;,@&amp;ldquo;test18&amp;rdquo;,@&amp;ldquo;test19&amp;rdquo;,@&amp;ldquo;test20&amp;rdquo;, nil]; NSArray *" />
+
+  <meta name="keywords" content="HLNotes, iOS, Mobile, Swift, Objective-c, Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="内容提要： 主要介绍如何使用NSPredicate过滤NSArray 使用到的对象有： NSArray NSPredicate 关键方法： NSArray 的 filteredArrayUsingPredicate 示例代码如下 {% highlight objc %} NSArray * tmp = [NSArray arrayWithObjects:@&ldquo;test1&rdquo;,@&ldquo;test2&rdquo;,@&ldquo;test3&rdquo;,@&ldquo;test4&rdquo;,@&ldquo;test5&rdquo;,@&ldquo;test6&rdquo;,@&ldquo;test7&rdquo;,@&ldquo;test8&rdquo;,@&ldquo;test9&rdquo;,@&ldquo;test10&rdquo;,@&ldquo;test11&rdquo;,@&ldquo;test12&rdquo;,@&ldquo;test13&rdquo;,@&ldquo;test14&rdquo;,@&ldquo;test15&rdquo;,@&ldquo;test16&rdquo;,@&ldquo;test17&rdquo;,@&ldquo;test18&rdquo;,@&ldquo;test19&rdquo;,@&ldquo;test20&rdquo;, nil]; NSArray *" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/" />
+<meta itemprop="name" content="">
+<meta itemprop="description" content="内容提要： 主要介绍如何使用NSPredicate过滤NSArray 使用到的对象有： NSArray NSPredicate 关键方法： NSArray 的 filteredArrayUsingPredicate 示例代码如下 {% highlight objc %} NSArray * tmp = [NSArray arrayWithObjects:@&ldquo;test1&rdquo;,@&ldquo;test2&rdquo;,@&ldquo;test3&rdquo;,@&ldquo;test4&rdquo;,@&ldquo;test5&rdquo;,@&ldquo;test6&rdquo;,@&ldquo;test7&rdquo;,@&ldquo;test8&rdquo;,@&ldquo;test9&rdquo;,@&ldquo;test10&rdquo;,@&ldquo;test11&rdquo;,@&ldquo;test12&rdquo;,@&ldquo;test13&rdquo;,@&ldquo;test14&rdquo;,@&ldquo;test15&rdquo;,@&ldquo;test16&rdquo;,@&ldquo;test17&rdquo;,@&ldquo;test18&rdquo;,@&ldquo;test19&rdquo;,@&ldquo;test20&rdquo;, nil]; NSArray *">
+
+
+
+<meta itemprop="wordCount" content="337">
+
+
+
+<meta itemprop="keywords" content="Objecitve-c,Code,NSPredicate," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="内容提要： 主要介绍如何使用NSPredicate过滤NSArray 使用到的对象有： NSArray NSPredicate 关键方法： NSArray 的 filteredArrayUsingPredicate 示例代码如下 {% highlight objc %} NSArray * tmp = [NSArray arrayWithObjects:@&ldquo;test1&rdquo;,@&ldquo;test2&rdquo;,@&ldquo;test3&rdquo;,@&ldquo;test4&rdquo;,@&ldquo;test5&rdquo;,@&ldquo;test6&rdquo;,@&ldquo;test7&rdquo;,@&ldquo;test8&rdquo;,@&ldquo;test9&rdquo;,@&ldquo;test10&rdquo;,@&ldquo;test11&rdquo;,@&ldquo;test12&rdquo;,@&ldquo;test13&rdquo;,@&ldquo;test14&rdquo;,@&ldquo;test15&rdquo;,@&ldquo;test16&rdquo;,@&ldquo;test17&rdquo;,@&ldquo;test18&rdquo;,@&ldquo;test19&rdquo;,@&ldquo;test20&rdquo;, nil]; NSArray *"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Notes</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Notes</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            
+              <a href="/categories/objective-c/"> Objective-c </a>
+            
+          </div>
+        <span class="more-meta"> 337 words </span>
+        <span class="more-meta"> 1 min read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#内容提要">内容提要：</a></li>
+<li><a href="#使用到的对象有">使用到的对象有：</a></li>
+<li><a href="#关键方法">关键方法：</a></li>
+<li><a href="#示例代码如下">示例代码如下</a></li>
+<li><a href="#需要注意理解的问题是not-self-in">需要注意理解的问题是NOT SELF IN</a></li>
+<li><a href="#相关知识-predicates">相关知识 Predicates</a>
+<ul>
+<li>
+<ul>
+<li><a href="#参考资料">参考资料</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h2 id="内容提要">内容提要：</h2>
+
+<p>主要介绍如何使用NSPredicate过滤NSArray</p>
+
+<h2 id="使用到的对象有">使用到的对象有：</h2>
+
+<ul>
+<li><p>NSArray</p></li>
+
+<li><p>NSPredicate</p></li>
+</ul>
+
+<h2 id="关键方法">关键方法：</h2>
+
+<blockquote>
+<p>NSArray 的 filteredArrayUsingPredicate</p>
+</blockquote>
+
+<h2 id="示例代码如下">示例代码如下</h2>
+
+<p>{% highlight objc %}</p>
+
+<p>NSArray * tmp = [NSArray arrayWithObjects:@&ldquo;test1&rdquo;,@&ldquo;test2&rdquo;,@&ldquo;test3&rdquo;,@&ldquo;test4&rdquo;,@&ldquo;test5&rdquo;,@&ldquo;test6&rdquo;,@&ldquo;test7&rdquo;,@&ldquo;test8&rdquo;,@&ldquo;test9&rdquo;,@&ldquo;test10&rdquo;,@&ldquo;test11&rdquo;,@&ldquo;test12&rdquo;,@&ldquo;test13&rdquo;,@&ldquo;test14&rdquo;,@&ldquo;test15&rdquo;,@&ldquo;test16&rdquo;,@&ldquo;test17&rdquo;,@&ldquo;test18&rdquo;,@&ldquo;test19&rdquo;,@&ldquo;test20&rdquo;, nil];
+NSArray * tmp2 = [NSArray arrayWithObjects:@&ldquo;test1&rdquo;,@&ldquo;test2&rdquo;,@&ldquo;test3&rdquo;,nil];</p>
+
+<p>NSPredicate *predicate =[NSPredicate predicateWithFormat:@&ldquo;NOT SELF IN %@&rdquo;,tmp2];
+NSArray * filtered = [tmp filteredArrayUsingPredicate:predicate];
+{% endhighlight %}</p>
+
+<h2 id="需要注意理解的问题是not-self-in">需要注意理解的问题是NOT SELF IN</h2>
+
+<p>not 是指 取反</p>
+
+<p>self 是指 对应于每一条NSString 这里的字符串来自于数组中的每个元素。</p>
+
+<p>IN 是指在 在数组tmp2中</p>
+
+<h2 id="相关知识-predicates">相关知识 Predicates</h2>
+
+<p>Predicates also have more condition functions, some of which I have only touched on here:</p>
+
+<ul>
+<li>beginswith : matches anything that begins with the supplied condition</li>
+<li>contains : matches anything that contains the supplied condition</li>
+<li>endswith : the opposite of begins with</li>
+<li>like : the wildcard condition, similar to its SQL counterpart. Matches anything that fits the wildcard condition</li>
+
+<li><p>matches : a regular expression matching condition. Beware: quite intense to run
+The syntax also contains the following other function, predicates and operations:</p></li>
+
+<li><p>AND (&amp;&amp;), OR (||), NOT (!)</p></li>
+
+<li><p>ANY, ALL, NONE, IN</p></li>
+
+<li><p>FALSE, TRUE, NULL, SELF</p></li>
+</ul>
+
+<p>NSPredicate *predicate = [NSPredicate predicateWithFormat:@&ldquo;lastName CONTAINS[cd] %@&ldquo;,
+                @&ldquo;o&rdquo;];
+Note that the [cd] next to the operator like causes it to ignore case and diacritics. Case is obvious, o = O. Diacritics are “ancillary glyphs added to a letter”, e.g. ó which is adding an accent to a plain o. With the [d] option o == ò == ö.</p>
+
+<h4 id="参考资料">参考资料</h4>
+
+<p><a href="http://alexeckermann.com/tutorials/filtering-nsarray-with-nspredicate.html">http://alexeckermann.com/tutorials/filtering-nsarray-with-nspredicate.html</a></p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">HLNotes</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">Markdown</span>
+      <span class="item-content"><a class="link-to-markdown" href="http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/index.md" target="_blank">The Markdown version »</a></span>
+    </p>
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/objecitve-c/">Objecitve-c</a>
+          
+          <a href="/tags/code/">Code</a>
+          
+          <a href="/tags/nspredicate/">NSPredicate</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/ios/2012-02-02-uitextview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">UITextView</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/objective-c/2012-1-31-nspredicate/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="/lib/gitalk/gitalk-1.2.2.min.css">
+    <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    id: '0001-01-01 00:00:00 \x2b0000 UTC',
+    title: '',
+    clientID: 'bbb57c084f94eeddca95',
+    clientSecret: '982e7d9e957e2c42fedb167c4ca7d58d80670e13',
+    repo: 'HLNotesGitment',
+    owner: 'hailongiPhone',
+    admin: ['hailongiPhone'],
+    body: decodeURI(location.href)
+  });
+  gitalk.render('gitalk-container');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ghl_hh@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/321949/hailong" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/hailongiPhone" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/2460787/" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://hlnotes.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">HLNotes</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

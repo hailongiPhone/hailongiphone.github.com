@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Circular inclusions - HLNotes</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="HLNotes" />
+  <meta name="description" content="关于循环引入的问题 ####### 英文Tag circular inclusions Circular dependency recursive includes 问题描述 如果两个类ClassA，ClassB，需要相互引入对方.此时无论外界先引入A、B，编译都不" />
+
+  <meta name="keywords" content="HLNotes, iOS, Mobile, Swift, Objective-c, Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://hlnotes.com/post/ios/2012-02-29-circular-inclusions/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Circular inclusions" />
+<meta property="og:description" content="关于循环引入的问题 ####### 英文Tag circular inclusions Circular dependency recursive includes 问题描述 如果两个类ClassA，ClassB，需要相互引入对方.此时无论外界先引入A、B，编译都不" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hlnotes.com/post/ios/2012-02-29-circular-inclusions/" /><meta property="article:published_time" content="2012-02-29T12:35:53&#43;00:00"/>
+<meta property="article:modified_time" content="2012-02-29T12:35:53&#43;00:00"/>
+<meta itemprop="name" content="Circular inclusions">
+<meta itemprop="description" content="关于循环引入的问题 ####### 英文Tag circular inclusions Circular dependency recursive includes 问题描述 如果两个类ClassA，ClassB，需要相互引入对方.此时无论外界先引入A、B，编译都不">
+
+
+<meta itemprop="datePublished" content="2012-02-29T12:35:53&#43;00:00" />
+<meta itemprop="dateModified" content="2012-02-29T12:35:53&#43;00:00" />
+<meta itemprop="wordCount" content="1262">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Circular inclusions"/>
+<meta name="twitter:description" content="关于循环引入的问题 ####### 英文Tag circular inclusions Circular dependency recursive includes 问题描述 如果两个类ClassA，ClassB，需要相互引入对方.此时无论外界先引入A、B，编译都不"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Notes</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Notes</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Circular inclusions</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-02-29 </span>
+        
+        <span class="more-meta"> 1262 words </span>
+        <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#关于循环引入的问题">关于循环引入的问题</a>
+<ul>
+<li><a href="#问题描述">问题描述</a></li>
+</ul></li>
+<li><a href="#示例代码如下">示例代码如下：</a>
+<ul>
+<li><a href="#具体问题出现原因解析">具体问题出现原因解析：</a></li>
+<li><a href="#对应的修改办法">对应的修改办法:</a></li>
+<li><a href="#问题描述-1">问题描述</a></li>
+<li><a href="#解决方法">解决方法：</a></li>
+<li><a href="#总结">总结</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="关于循环引入的问题">关于循环引入的问题</h1>
+
+<p>####### 英文Tag
+    circular inclusions
+    Circular dependency
+  recursive includes</p>
+
+<h2 id="问题描述">问题描述</h2>
+
+<pre><code>    如果两个类ClassA，ClassB，需要相互引入对方.此时无论外界先引入A、B，编译都不能通过，没有定义的类型。
+</code></pre>
+
+<h1 id="示例代码如下">示例代码如下：</h1>
+
+<p>HLClassA.h</p>
+
+<pre><code>#import &quot;HLClassB.h&quot;                          //Line A1
+@interface HLClassA : NSObject
+@property (nonatomic, strong) HLClassB * tmp;  //Line A2
+@end
+</code></pre>
+
+<p>HLClassB.h</p>
+
+<pre><code>#import &quot;HLClassA.h&quot;                          //Line B1
+@interface HLClassB : NSObject
+@property (nonatomic, strong) HLClassA * tmp; //Line B2
+@end
+</code></pre>
+
+<p>对应的实现文件并没有处理任何操作便在此省略。</p>
+
+<p>此时编译，编译器则提示：
+<img src="/images/Debug/Debug_Circular_inclusions.png" alt="Image" title="编译器提示" /></p>
+
+<h2 id="具体问题出现原因解析">具体问题出现原因解析：</h2>
+
+<p>如果我们其他类ClassC中用到ClassA，引入A的头文件，首先处理的就是Line
+A1，这样就会import ClassB，处理执行到Line
+B1的位置，由于ClassA已经被ClassC引入所以忽略/不再引入（为什么忽略可以见<a href="http://stackoverflow.com/questions/439662/what-is-the-difference-between-import-and-include-in-objective-c">#import
+与#include的区别</a>）。继续执行，执行到Line B2 时就会报错，class
+A没有定义。
+    如果我们先引入ClassB，首相处理到Line B1，处理继续则执行到Line
+A1,由于已经引入ClassB忽略，执行到Line A2，报错，未定义的ClassB</p>
+
+<h2 id="对应的修改办法">对应的修改办法:</h2>
+
+<pre><code>解决的办法就是停止这种循环引用。
+
+# 首先从设计上解决：
+  考虑能不能让A与B不要相互引用。
+
+# 其次从代码上解决：
+  由上面的分析可知，我们只要修改A、B其中的一个，不引入对方即可打破循环引入。
+  但是不引入文件我们如何使用其中的类那？
+  forward-class declaration 提前类声明. 用@class 类名;的方式进行类失声，在.m实现文件中引入具体文件。
+
+修改后代码如下：
+</code></pre>
+
+<p>HLClassA.h
+{% highlight objc %}
+@class HLClassB;                                //Line A1
+@interface HLClassA : NSObject
+@property (nonatomic, strong) HLClassB * tmp;  //Line A2
+@end
+{% endhighlight%}</p>
+
+<p>HLClassA.m
+{% highlight objc %}
+#import &ldquo;HLClassA.h&rdquo;
+#import &ldquo;HLClassB.m&rdquo;
+@implementation HLClassA
+@synthesize tmp = _tmp;
+@end
+{% endhighlight%}</p>
+
+<pre><code>大家可以看出来主要的修改就是用@class替换掉了#import，把#import移到.m实现文件中。
+</code></pre>
+
+<p>PS：这里也就是<a href="http://stackoverflow.com/questions/322597/class-vs-import">@class VS. #import的利弊</a></p>
+
+<h2 id="问题描述-1">问题描述</h2>
+
+<pre><code>上面讲了对于类对象出现的相互引用，如果两个类A，B,都要实现对方的代理会如何？
+
+
+代码如下：
+ClassA.h 定义代理ClassADelegat
+</code></pre>
+
+<p>{% highlight objc%}</p>
+
+<p>@class HLClassB;</p>
+
+<p>@protocol ClassADelegate;                       //Line A1</p>
+
+<p>@interface HLClassA : NSObject<ClassBDelegate> //Line A2
+@property (nonatomic, strong) HLClassB * tmp;</p>
+
+<p>@protocol ClassADelegate
+- (void)classADelegate;
+@end
+@end
+    {% endhighlight %}</p>
+
+<pre><code>ClassB.h 定义代理ClassBDelegat
+</code></pre>
+
+<p>{% highlight objc%}</p>
+
+<p>@class HLClassA;</p>
+
+<p>@protocol ClassBDelegate;                           //Line B1</p>
+
+<p>@interface HLClassB : NSObject<ClassADelegate>  //Line B2
+@property (nonatomic, strong) HLClassA * tmp;</p>
+
+<p>@protocol ClassBDelegate
+- (void)classBDelegate;
+@end
+@end
+{% endhighlight %}</p>
+
+<pre><code>编译运行：
+![Image](/images/Debug/Debug_Circular_inclusions_delegate.png &quot;代理循环&quot;)
+
+找不到定义的代理协议protocol。
+</code></pre>
+
+<h2 id="解决方法">解决方法：</h2>
+
+<pre><code>有了之前的经验，我们可以看出，还是的执行到自己的line 2的地方，对方的Line 1都还没有处理。
+那能否直接加协议提前声明？
+
+但是协议的提前声明似乎只在同一个文件有用，我们修改ClassB.h如下
+</code></pre>
+
+<p>{% highlight objc %}
+@class HLClassA;
+@protocol ClassADelegate;</p>
+
+<p>@protocol ClassBDelegate;
+@interface HLClassB : NSObject<ClassADelegate>
+@property (nonatomic, strong) HLClassA * tmp;</p>
+
+<p>@protocol ClassBDelegate
+- (void)classBDelegate;
+@end
+@end
+{% endhighlight %}</p>
+
+<pre><code>可以通过编译，但有警告：
+Cannot find protocol declaration for 'HLClassADelegate'; did you mean 'HLClassBDelegate'?
+
+最后的解决办法就是把协议提到单独的头文件中，在需要使用的地方直接引入
+</code></pre>
+
+<p>修改后的ClassA.h
+{% highlight objc %}
+#import &ldquo;HLClassBDelegate.h&rdquo;
+@class HLClassB;
+@interface HLClassA : NSObject <HLClassBDelegate>
+@property (nonatomic, strong) HLClassB * tmp1;
+@end
+{% endhighlight %}</p>
+
+<p>HLClassBDelegate.h文件
+{% highlight objc %}
+@protocol HLClassBDelegate <NSObject>
+- (void)classBDelegate;
+@end
+{% endhighlight %}</p>
+
+<h2 id="总结">总结</h2>
+
+<pre><code>这里指出的两种情况都是很直接很明显的循环引入问题，平时如果会遇到，大都是隐藏的更深的，不明显的大循环：
+    如 a-&gt;b-&gt;c-&gt;d…z-&gt;a
+所以为了更好的避免这种隐形的大循环
+最好用@class 代替 #import.
+协议最好单独写在一个头文件中.
+</code></pre>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">HLNotes</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2012-02-29</span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">Markdown</span>
+      <span class="item-content"><a class="link-to-markdown" href="http://hlnotes.com/post/ios/2012-02-29-circular-inclusions/index.md" target="_blank">The Markdown version »</a></span>
+    </p>
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/metadata/markdown%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Markdown样式测试</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/ios/2012-02-15-convert-plist-file-from-nsdata-to-nsdictionary/">
+            <span class="next-text nav-default">convert plist file from NSData to NSDictionary</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="/lib/gitalk/gitalk-1.2.2.min.css">
+    <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    id: '2012-02-29 12:35:53 \x2b0000 UTC',
+    title: 'Circular inclusions',
+    clientID: 'bbb57c084f94eeddca95',
+    clientSecret: '982e7d9e957e2c42fedb167c4ca7d58d80670e13',
+    repo: 'HLNotesGitment',
+    owner: 'hailongiPhone',
+    admin: ['hailongiPhone'],
+    body: decodeURI(location.href)
+  });
+  gitalk.render('gitalk-container');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ghl_hh@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/321949/hailong" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/hailongiPhone" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/2460787/" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://hlnotes.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">HLNotes</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

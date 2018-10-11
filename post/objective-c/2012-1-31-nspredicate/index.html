@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title> - HLNotes</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="HLNotes" />
+  <meta name="description" content="内容： Predicate的基本知识和限制 如何创建predicate 介绍常用的 predicate 语法 基础介绍： 什么是predicate？ 一个predicate" />
+
+  <meta name="keywords" content="HLNotes, iOS, Mobile, Swift, Objective-c, Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="内容： Predicate的基本知识和限制 如何创建predicate 介绍常用的 predicate 语法 基础介绍： 什么是predicate？ 一个predicate" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/" />
+<meta itemprop="name" content="">
+<meta itemprop="description" content="内容： Predicate的基本知识和限制 如何创建predicate 介绍常用的 predicate 语法 基础介绍： 什么是predicate？ 一个predicate">
+
+
+
+<meta itemprop="wordCount" content="1364">
+
+
+
+<meta itemprop="keywords" content="Objecitve-c,NSPredicate," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="内容： Predicate的基本知识和限制 如何创建predicate 介绍常用的 predicate 语法 基础介绍： 什么是predicate？ 一个predicate"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Notes</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Notes</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title"></h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 0001-01-01 </span>
+        <div class="post-category">
+            
+              <a href="/categories/objective-c/"> Objective-c </a>
+            
+          </div>
+        <span class="more-meta"> 1364 words </span>
+        <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#内容">内容：</a></li>
+<li><a href="#基础介绍">基础介绍：</a>
+<ul>
+<li><a href="#什么是predicate">什么是predicate？</a></li>
+<li><a href="#predicate的分类">predicate的分类？</a></li>
+<li><a href="#predicate-classes-结构">Predicate Classes 结构</a></li>
+<li><a href="#如何创建谓词">如何创建谓词</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#format-string-summary">Format String Summary</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h4 id="内容">内容：</h4>
+
+<ul>
+<li>Predicate的基本知识和限制</li>
+<li>如何创建predicate</li>
+<li>介绍常用的 predicate 语法</li>
+</ul>
+
+<h4 id="基础介绍">基础介绍：</h4>
+
+<h5 id="什么是predicate">什么是predicate？</h5>
+
+<pre><code>一个predicate是一个逻辑运算，必须要返回True或者False。
+</code></pre>
+
+<h5 id="predicate的分类">predicate的分类？</h5>
+
+<pre><code>- comparison predicate
+    比较式的谓词，比较运算符两边的数据，返回运算符表达式的结果
+
+- compound predicate
+  组合式的谓词，由多个谓词组合而成，或者negates其他谓词
+</code></pre>
+
+<h5 id="predicate-classes-结构">Predicate Classes 结构</h5>
+
+<p>3个谓词类，<code>NSPredicate</code> 和 它的两个子类 NSComparisonPredicate NSCompoundPredicate</p>
+
+<h5 id="如何创建谓词">如何创建谓词</h5>
+
+<p>三种方式：
+  从格式化字符串创建</p>
+
+<pre><code class="language-objc">NSPredicate *predicate = [NSPredicate
+predicateWithFormat:@&quot;(lastName like[cd] %@) AND (birthday &gt; %@)&quot;,lastNameSearchString, birthdaySearchDate];
+</code></pre>
+
+<p>注意</p>
+
+<pre><code>* 是对于这种格式化字符串，在写的时候并不会做语义分析，所以只有在运行时runtime才会对其做语义解析，才能发现格式化字符串是否有错
+* 对于字符串，变量，转义字符的使用。
+对于字符串，字符串变量要用引号包含起来
+例如：判断lastName中是否是 S开头
+</code></pre>
+
+<pre><code class="language-objc">NSPredicate *predicate = [NSPredicate
+predicateWithFormat:@&quot;lastName like[c] \&quot;S*\&quot;&quot;];
+</code></pre>
+
+<p>例如：判断字符串本身是否符合 “prefix*suffix”的格式</p>
+
+<pre><code class="language-objc">NSString *prefix = @&quot;prefix&quot;;
+NSString *suffix = @&quot;suffix&quot;;
+NSPredicate *predicate = [NSPredicate
+predicateWithFormat:@&quot;SELF like[c] %@&quot;,[[prefix stringByAppendingString:@&quot;*&quot;] stringByAppendingString:suffix]];
+BOOL ok = [predicate evaluateWithObject:@&quot;prefixxxxxxsuffix&quot;];
+</code></pre>
+
+<p>这里的返回值ok就为YES
+但如果写成：</p>
+
+<pre><code class="language-objc">predicate = [NSPredicate predicateWithFormat:@&quot;SELF like[c] %@*%@&quot;, prefix, suffix];
+ok = [predicate evaluateWithObject:@&quot;prefixxxxxxsuffix&quot;];
+</code></pre>
+
+<p>或者</p>
+
+<pre><code class="language-objc">predicate = [NSPredicate predicateWithFormat:@&quot;SELF like[c] %@*&quot;, prefix];
+</code></pre>
+
+<p>在运行时就会报错， (Unable to parse the format string &ldquo;SELF like[c] %@&ldquo;).</p>
+
+<p>对于Boolean 值的使用
+只能以NSNumber或者YES、NO的方式使用，如下</p>
+
+<pre><code class="language-objc">	NSPredicate *newPredicate =
+    [NSPredicate predicateWithFormat:@&quot;anAttribute == %@&quot;, [NSNumber numberWithBool:aBool]];
+NSPredicate *testForTrue =
+    [NSPredicate predicateWithFormat:@&quot;anAttribute == YES&quot;];
+</code></pre>
+
+<p>4 动态属性名</p>
+
+<pre><code class="language-objc">NSString *attributeName = @&quot;firstName&quot;;
+NSString *attributeValue = @&quot;Adam&quot;;
+NSPredicate *predicate = [NSPredicate predicateWithFormat:@&quot;%K like %@&quot;,
+        attributeName, attributeValue];
+</code></pre>
+
+<p>其效果： firstName like &ldquo;Adam&rdquo;</p>
+
+<p>5 表达式变量
+    详见模版方式创建predicate
+- 用代码创建
+ NSComparisonPredicate 和 NSCompoundPredicate就是为了方便用代码直接产生谓词的。还需要使用的是NSExpression-生成谓词表达式。
+例如：用代码创建判断revenue &gt;= 1000000和revenue &lt; 100000000的谓词
+代码如下：</p>
+
+<pre><code class="language-objc">NSExpression *lhs = [NSExpression expressionForKeyPath:@&quot;revenue&quot;];
+
+NSExpression *greaterThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:1000000]];
+NSPredicate *greaterThanPredicate = [NSComparisonPredicate
+    predicateWithLeftExpression:lhs
+    rightExpression:greaterThanRhs
+    modifier:NSDirectPredicateModifier
+    type:NSGreaterThanOrEqualToPredicateOperatorType
+    options:0];
+
+NSExpression *lessThanRhs = [NSExpression expressionForConstantValue:[NSNumber numberWithInt:100000000]];
+NSPredicate *lessThanPredicate = [NSComparisonPredicate
+    predicateWithLeftExpression:lhs
+    rightExpression:lessThanRhs
+    modifier:NSDirectPredicateModifier
+    type:NSLessThanPredicateOperatorType
+    options:0];
+
+NSCompoundPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:
+    [NSArray arrayWithObjects:greaterThanPredicate, lessThanPredicate, nil]];
+</code></pre>
+
+<ul>
+<li>用谓词模版创建
+谓词模版的出现，可以视作是对于方便使用，但是容易出错的格式化字符串，和纯代码方式的中和。
+谓词模版实际上就是包含表达式变量的谓词。</li>
+</ul>
+
+<p>使用的步骤：
+1 创建谓词模版
+2 使用NSPredicate 的实例方法 predicateWithSubstitutionVariables:来定义表达式变量的值，并返回最终的谓词。</p>
+
+<p>如下：
+  ￥LAST_NAME 就算是一个表达式变量(variable expression)</p>
+
+<pre><code class="language-objc">predicateTemplate = [NSPredicate
+    predicateWithFormat:@&quot;lastName like[c] $LAST_NAME&quot;];
+predicate = [predicateTemplate predicateWithSubstitutionVariables:
+    [NSDictionary dictionaryWithObject:@&quot;Turner&quot; forKey:@&quot;LAST_NAME&quot;]];
+</code></pre>
+
+<h3 id="format-string-summary">Format String Summary</h3>
+
+<p>上面讲完了初始化NSPredicate的3种方式，
+总结下在格式化字符串中出现的关键字占位符</p>
+
+<p>%@ 如同printf，替换为对应变量的description
+%K 替换为动态的属性名
+$variable 替换为表达式</p>
+
+<p>常见的格式如下：</p>
+
+<p>@&ldquo;SELF == %@&rdquo;
+判断检查对象本身的值是否等于占位符%@指代的对象</p>
+
+<p>@&ldquo;attributeName == %@&rdquo;
+判断谓词正在检测的对象的属性attributeName的值是否与占位符替代的字符串的值相等。</p>
+
+<p>@&ldquo;%K == %@&rdquo;
+判断正在检测对象的属性（由占位符%K指定属性名称）的值是否与%@指定的字符串对象相等</p>
+
+<p>@&ldquo;name IN $NAME_LIST&rdquo;
+判断属性name的值 是否在NAME_LIST指定的集合当中，这个集合由predicateWithSubstitutionVariables：方法指定</p>
+
+<p>@&ldquo;&lsquo;name&rsquo; IN $NAME_LIST&rdquo;
+判断字符串‘name’是否在NAME_LIST指定的集合当中。</p>
+
+<p>@&ldquo;$name IN $NAME_LIST&rdquo;
+判断name表达式的值是否在NAME_LIST表达式指定的集合中。</p>
+
+<p>@&ldquo;%K == &lsquo;%@&rsquo;&rdquo;
+判断%K属性的值是否和字符串&rsquo;%@&lsquo;相等</p>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">HLNotes</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  <p class="copyright-item">
+      <span class="item-title">Markdown</span>
+      <span class="item-content"><a class="link-to-markdown" href="http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/index.md" target="_blank">The Markdown version »</a></span>
+    </p>
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/objecitve-c/">Objecitve-c</a>
+          
+          <a href="/tags/nspredicate/">NSPredicate</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default"></span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/core-samples/2011-12-29-jekyll-introduction/">
+            <span class="next-text nav-default"></span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="/lib/gitalk/gitalk-1.2.2.min.css">
+    <script src="/lib/gitalk/gitalk-1.2.2.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    id: '0001-01-01 00:00:00 \x2b0000 UTC',
+    title: '',
+    clientID: 'bbb57c084f94eeddca95',
+    clientSecret: '982e7d9e957e2c42fedb167c4ca7d58d80670e13',
+    repo: 'HLNotesGitment',
+    owner: 'hailongiPhone',
+    admin: ['hailongiPhone'],
+    body: decodeURI(location.href)
+  });
+  gitalk.render('gitalk-container');
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ghl_hh@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/321949/hailong" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/hailongiPhone" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/2460787/" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://hlnotes.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">HLNotes</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

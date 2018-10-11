@@ -1,60 +1,441 @@
----
-title: Home
-layout: default
-navigationWeight: 1
-navIcon:
----
-  <section class="content">
-		<!-- <div class="container">
-			<div class="text-heading animated bounceInRight"> -->
-				<h1 class="header grey-text lighten-2">Blog</h1>
-			<!-- </div>
-		</div> -->
-	</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>HLNotes</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  <!-- Loop output paged posts -->
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-
-  {% for post in paginator.posts %}
-    <ul class="collection hoverable">
-      {% include post_card.html parampost=post %}
-    </ul>
-
-  {% endfor %}
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-  <!-- Pagination links -->
-  <div class="col s4">
+<meta name="author" content="HLNotes" />
+  <meta name="description" content="Hugo theme even example site." />
+  <meta name="keywords" content="HLNotes, iOS, Mobile, Swift, Objective-c, Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://hlnotes.com/" />
+<link href="http://hlnotes.com/index.xml" rel="alternate" type="application/rss+xml" title="HLNotes" />
+  <link href="http://hlnotes.com/index.xml" rel="feed" type="application/rss+xml" title="HLNotes" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="HLNotes" />
+<meta property="og:description" content="Hugo theme even example site." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://hlnotes.com/" />
+<meta property="og:updated_time" content="2018-10-11T21:55:55&#43;08:00"/>
+<meta itemprop="name" content="HLNotes">
+<meta itemprop="description" content="Hugo theme even example site.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HLNotes"/>
+<meta name="twitter:description" content="Hugo theme even example site."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Notes</a>
   </div>
-  <div class="col s4">
-  <section>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Notes</a>
+</div>
 
-    <ul class="pagination">
-      {% if paginator.previous_page %}
-        <li class="waves-effect"><a href="{{ paginator.previous_page_path }}"><i class="material-icons">chevron_left</i></a></li>
-      {% else %}
-        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-      {% endif %}
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
 
-      {% for i in (1..paginator.total_pages) %}
-        {% if i == paginator.page %}
-          <li class="active"><a href="#!">{{ i }}</a></li>
-        {% elsif i == 1 %}
-          <li class="waves-effect"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ i }}</a></li>
-        {% else %}
-          <li class="waves-effect"><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/'  | replace: ":num", i }}">{{ i }}</a></li>
-        {% endif %}
-      {% endfor %}
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          
+  <section id="posts" class="posts">
+    
+    
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/metadata/markdown%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/">Markdown样式测试</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-10-11 </span>
+      <div class="post-category">
+          
+            <a href="/categories/markdown/"> Markdown </a>
+          
+        </div>
+      <span class="more-meta"> 840 words </span>
+      <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="markdown样式测试">markdown样式测试</h2>
 
-       {% if paginator.next_page %}
-         <li class="waves-effect"><a href="{{ paginator.next_page_path }}"><i class="material-icons">chevron_right</i></a></li>
-       {% else %}
-         <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-       {% endif %}
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/post/metadata/markdown%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
 
-     </ul>
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ios/2012-02-29-circular-inclusions/">Circular inclusions</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-02-29 </span>
+      
+      <span class="more-meta"> 1262 words </span>
+      <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      关于循环引入的问题 ####### 英文Tag circular inclusions Circular dependency recursive includes 问题描述 如果两个类ClassA，ClassB，需要相互引入对方.此时无论外界先引入A、B，编译都不
+    </div>
+    <div class="read-more">
+      <a href="/post/ios/2012-02-29-circular-inclusions/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
 
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ios/2012-02-15-convert-plist-file-from-nsdata-to-nsdictionary/">convert plist file from NSData to NSDictionary</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-02-15 </span>
+      
+      <span class="more-meta"> 235 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      plist文件，在NSData与NSDictionary之间的转换 plist文件转换成NSData {% highlight objc %} NSString *plistPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@&ldquo;plist&rdquo;]; plistData = [NSData dataWithContentsOfFile:plistPath]; {% endhighlight objc %} pl
+    </div>
+    <div class="read-more">
+      <a href="/post/ios/2012-02-15-convert-plist-file-from-nsdata-to-nsdictionary/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ios/2012-02-08-system-absolute-time/">System-Absolute-Time</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-02-08 </span>
+      
+      <span class="more-meta"> 941 words </span>
+      <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      什么是系统绝对时间？ 绝对时间： 瞭解了一些時區的概念之後，這裡要談的是『什麼是正確的時間』。 在 1880 年代的時間標準是以 GMT 時間為主的，但是 GMT 時間是以
+    </div>
+    <div class="read-more">
+      <a href="/post/ios/2012-02-08-system-absolute-time/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ios/2012-02-07-network-link-condition/">Network link condition</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-02-07 </span>
+      
+      <span class="more-meta"> 238 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      设置用于测试的网络环境 环境：lion 使用的工具： 苹果自带开发工具 Network link condition 安装 Network link condition在/Developer/Applicatio
+    </div>
+    <div class="read-more">
+      <a href="/post/ios/2012-02-07-network-link-condition/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ios/2012-02-03-how-to-build-horizontal-uitableview/">How to build Horizontal UITableView</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-02-03 </span>
+      
+      <span class="more-meta"> 469 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      如何建立水平滑动的UITableView 最简单，最直接的做法： 在初始化UITableView的时候，旋转之。 在初始化tableViewcel
+    </div>
+    <div class="read-more">
+      <a href="/post/ios/2012-02-03-how-to-build-horizontal-uitableview/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ios/2012-02-03-load-uitableviewcell-from-xib/">load-UITableViewCell-From-Xib</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-02-03 </span>
+      
+      <span class="more-meta"> 141 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      如何加载在xib中定义的UITableViewCell 主要还是使用NSBundle加载 关键代码如实： {% highlight objc %} //这里toplavelobje
+    </div>
+    <div class="read-more">
+      <a href="/post/ios/2012-02-03-load-uitableviewcell-from-xib/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ios/2012-02-02-uitextview/">UITextView</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-02-02 </span>
+      
+      <span class="more-meta"> 267 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      UITextView 在使用UITextView常遇到如下需求： - 键盘显示时，把界面上移 - 键盘隐藏时，界面下移 - 限制输入的字符数，并在界面上显示 - 监听键盘上Do
+    </div>
+    <div class="read-more">
+      <a href="/post/ios/2012-02-02-uitextview/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/objective-c/"> Objective-c </a>
+          
+        </div>
+      <span class="more-meta"> 337 words </span>
+      <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      内容提要： 主要介绍如何使用NSPredicate过滤NSArray 使用到的对象有： NSArray NSPredicate 关键方法： NSArray 的 filteredArrayUsingPredicate 示例代码如下 {% highlight objc %} NSArray * tmp = [NSArray arrayWithObjects:@&ldquo;test1&rdquo;,@&ldquo;test2&rdquo;,@&ldquo;test3&rdquo;,@&ldquo;test4&rdquo;,@&ldquo;test5&rdquo;,@&ldquo;test6&rdquo;,@&ldquo;test7&rdquo;,@&ldquo;test8&rdquo;,@&ldquo;test9&rdquo;,@&ldquo;test10&rdquo;,@&ldquo;test11&rdquo;,@&ldquo;test12&rdquo;,@&ldquo;test13&rdquo;,@&ldquo;test14&rdquo;,@&ldquo;test15&rdquo;,@&ldquo;test16&rdquo;,@&ldquo;test17&rdquo;,@&ldquo;test18&rdquo;,@&ldquo;test19&rdquo;,@&ldquo;test20&rdquo;, nil]; NSArray *
+    </div>
+    <div class="read-more">
+      <a href="/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/objective-c/2012-1-31-nspredicate/"></a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 0001-01-01 </span>
+      <div class="post-category">
+          
+            <a href="/categories/objective-c/"> Objective-c </a>
+          
+        </div>
+      <span class="more-meta"> 1364 words </span>
+      <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      内容： Predicate的基本知识和限制 如何创建predicate 介绍常用的 predicate 语法 基础介绍： 什么是predicate？ 一个predicate
+    </div>
+    <div class="read-more">
+      <a href="/post/objective-c/2012-1-31-nspredicate/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
+    
   </section>
+  
+  <nav class="pagination">
+    
+    
+      <a class="next" href="/page/2/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+  </nav>
+
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:ghl_hh@hotmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/321949/hailong" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/hailongiPhone" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.douban.com/people/2460787/" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://hlnotes.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
-<div class="col s4">
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2012 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">HLNotes</span>
+  </span>
 </div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      TeX: {equationNumbers: {autoNumber: "AMS"}},
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

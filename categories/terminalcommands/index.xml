@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TerminalCommands on HLNotes</title>
+    <link>http://hlnotes.com/categories/terminalcommands/</link>
+    <description>Recent content in TerminalCommands on HLNotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://hlnotes.com/categories/terminalcommands/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FTP Commands</title>
+      <link>http://hlnotes.com/post/terminalcommands/2012-1-17-ftpcommands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/terminalcommands/2012-1-17-ftpcommands/</guid>
+      <description>[命令行工具]Ftp 本文用来记录使用到的Ftp基本命令。 本文涉及命令： 登陆远程服务器 上传文件 下载文件 登陆远程服务器 登陆方式一： 1 发送连接请求</description>
+    </item>
+    
+  </channel>
+</rss>

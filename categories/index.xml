@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on HLNotes</title>
+    <link>http://hlnotes.com/categories/</link>
+    <description>Recent content in Categories on HLNotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://hlnotes.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown</title>
+      <link>http://hlnotes.com/categories/markdown/</link>
+      <pubDate>Thu, 11 Oct 2018 21:55:55 +0800</pubDate>
+      
+      <guid>http://hlnotes.com/categories/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Objective-c</title>
+      <link>http://hlnotes.com/categories/objective-c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/categories/objective-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TerminalCommands</title>
+      <link>http://hlnotes.com/categories/terminalcommands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/categories/terminalcommands/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Objecitve-c on HLNotes</title>
+    <link>http://hlnotes.com/tags/objecitve-c/</link>
+    <description>Recent content in Objecitve-c on HLNotes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="http://hlnotes.com/tags/objecitve-c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/</guid>
+      <description>内容提要： 主要介绍如何使用NSPredicate过滤NSArray 使用到的对象有： NSArray NSPredicate 关键方法： NSArray 的 filteredArrayUsingPredicate 示例代码如下 {% highlight objc %} NSArray * tmp = [NSArray arrayWithObjects:@&amp;ldquo;test1&amp;rdquo;,@&amp;ldquo;test2&amp;rdquo;,@&amp;ldquo;test3&amp;rdquo;,@&amp;ldquo;test4&amp;rdquo;,@&amp;ldquo;test5&amp;rdquo;,@&amp;ldquo;test6&amp;rdquo;,@&amp;ldquo;test7&amp;rdquo;,@&amp;ldquo;test8&amp;rdquo;,@&amp;ldquo;test9&amp;rdquo;,@&amp;ldquo;test10&amp;rdquo;,@&amp;ldquo;test11&amp;rdquo;,@&amp;ldquo;test12&amp;rdquo;,@&amp;ldquo;test13&amp;rdquo;,@&amp;ldquo;test14&amp;rdquo;,@&amp;ldquo;test15&amp;rdquo;,@&amp;ldquo;test16&amp;rdquo;,@&amp;ldquo;test17&amp;rdquo;,@&amp;ldquo;test18&amp;rdquo;,@&amp;ldquo;test19&amp;rdquo;,@&amp;ldquo;test20&amp;rdquo;, nil]; NSArray *</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/</guid>
+      <description>内容： Predicate的基本知识和限制 如何创建predicate 介绍常用的 predicate 语法 基础介绍： 什么是predicate？ 一个predicate</description>
+    </item>
+    
+  </channel>
+</rss>
