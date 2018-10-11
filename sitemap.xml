@@ -59,18 +59,6 @@
   </url>
   
   <url>
-    <loc>http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://hlnotes.com/post/core-samples/2011-12-29-jekyll-introduction/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -126,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://hlnotes.com/categories/markdown/</loc>
+    <loc>http://hlnotes.com/tags/markdown/</loc>
     <lastmod>2018-10-11T21:55:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://hlnotes.com/tags/markdown/</loc>
+    <loc>http://hlnotes.com/categories/markdown/</loc>
     <lastmod>2018-10-11T21:55:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -162,6 +150,12 @@
     <lastmod>2018-10-11T21:55:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/objective-c/2012-1-31-nspredicate/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -209,6 +203,12 @@
   
   <url>
     <loc>http://hlnotes.com/post/cocoa-touch/2012-02-02-cocoa-touch-animations/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hlnotes.com/post/objective-c/2012-1-30-objective-c%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -13,14 +13,14 @@
 ## 示例代码如下：
 - step 1 初始化UITableView
 {% highlight objc %}
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) 
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)
                                               style:UITableViewStylePlain];
     _tableView.transform = CGAffineTransformMakeRotation(-M_PI * 0.5);
 // 关键点UITableView transform 需要注意的是transform后frame也发生变换，需要重新设置
     _tableView.frame = CGRectMake(KTableViewX, KTableViewY, kTableViewWidth ,kTableViewHeight) ;
     _tableView.showsVerticalScrollIndicator = NO;
     _tableView.showsHorizontalScrollIndicator = NO;
-    
+
     _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     _tableView.separatorColor = [UIColor blueColor];
     _tableView.dataSource = self;
@@ -37,11 +37,11 @@
 	NSUInteger row;
 	section = indexPath.section;
 	row = indexPath.row;
-	
+
 	UITableViewCell* cell;
 	cell = [tableView dequeueReusableCellWithIdentifier:@"default"];
 	if (!cell) {
-        
+
         NSArray *toplavelobject=[[NSBundle mainBundle]loadNibNamed:@"XIBNAME" owner:self options:nil];
         for(id c in toplavelobject)
         {
@@ -57,7 +57,7 @@
 	}
 	cell.backgroundColor = [UIColor redColor];
 	cell.textLabel.text = @"default";
-	
+
 	return cell;
 }
 

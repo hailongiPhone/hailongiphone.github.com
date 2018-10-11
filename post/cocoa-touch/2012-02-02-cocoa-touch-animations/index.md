@@ -71,7 +71,7 @@ iOS中，左上角是原点，向下和向右为正值
 - rotation.x  x轴旋转弧度
 - rotation.y  y轴旋转弧度
 - rotation.z  z轴旋转弧度
-- rotation 
+- rotation
 - scale.x
 - scale.y
 - scale.z
@@ -99,7 +99,7 @@ iOS中，左上角是原点，向下和向右为正值
 示例代码，把self.contentView向屏幕上方移动55个像素
 {% highlight objc %}
 CABasicAnimation * theAnimation=[CABasicAnimation animationWithKeyPath:@"transform"];
-    
+
     theAnimation.duration=0.35;
     theAnimation.repeatCount=1;
     theAnimation.autoreverses=NO;
