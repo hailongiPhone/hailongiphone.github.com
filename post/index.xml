@@ -86,16 +86,6 @@
     </item>
     
     <item>
-      <title></title>
-      <link>http://hlnotes.com/post/core-samples/2011-12-29-jekyll-introduction/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://hlnotes.com/post/core-samples/2011-12-29-jekyll-introduction/</guid>
-      <description>This Jekyll introduction will outline specifically what Jekyll is and why you would want to use it. Directly following the intro we&amp;rsquo;ll learn exactly how Jekyll does what it does.
-Overview What is Jekyll? Jekyll is a parsing engine bundled as a ruby gem used to build static websites from dynamic components such as templates, partials, liquid code, markdown, etc. Jekyll is known as &amp;ldquo;a simple, blog aware, static site generator&amp;rdquo;.</description>
-    </item>
-    
-    <item>
       <title>FTP Commands</title>
       <link>http://hlnotes.com/post/terminalcommands/2012-1-17-ftpcommands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

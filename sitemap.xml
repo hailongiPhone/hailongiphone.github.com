@@ -59,18 +59,6 @@
   </url>
   
   <url>
-    <loc>http://hlnotes.com/post/core-samples/2011-12-29-jekyll-introduction/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://hlnotes.com/tags/beginner/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://hlnotes.com/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -97,18 +85,6 @@
   <url>
     <loc>http://hlnotes.com/</loc>
     <lastmod>2018-10-11T21:55:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://hlnotes.com/tags/intro/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://hlnotes.com/tags/jekyll/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -191,12 +167,6 @@
   
   <url>
     <loc>http://hlnotes.com/tags/terminalcommands/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://hlnotes.com/tags/tutorial/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

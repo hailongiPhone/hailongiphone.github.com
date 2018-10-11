@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Beginner</title>
-      <link>http://hlnotes.com/tags/beginner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://hlnotes.com/tags/beginner/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Code</title>
       <link>http://hlnotes.com/tags/code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -35,24 +26,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://hlnotes.com/tags/ftp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Intro</title>
-      <link>http://hlnotes.com/tags/intro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://hlnotes.com/tags/intro/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jekyll</title>
-      <link>http://hlnotes.com/tags/jekyll/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://hlnotes.com/tags/jekyll/</guid>
       <description></description>
     </item>
     
@@ -107,15 +80,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://hlnotes.com/tags/terminalcommands/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>http://hlnotes.com/tags/tutorial/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://hlnotes.com/tags/tutorial/</guid>
       <description></description>
     </item>
     
